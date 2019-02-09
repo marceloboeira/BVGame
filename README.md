@@ -1,5 +1,5 @@
 # 💛 BVGame
-> An non-official BVG Stations Game
+> An unofficial BVG Stations Game
 
 ## Motivation
 
