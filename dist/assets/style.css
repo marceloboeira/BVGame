@@ -51,6 +51,10 @@ body {
   text-align: center;
 }
 
+#body .title h2.start {
+  cursor: pointer;
+}
+
 #body .options {
   display: flex;
   padding: 10px;

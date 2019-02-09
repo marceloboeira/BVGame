@@ -11,29 +11,40 @@ import String
 
 
 type alias State =
-    { question : Station, lastAnswer : Maybe Bool, score : Int }
+    { question : Maybe Station, lastAnswer : Maybe Bool, score : Int }
 
 
 type Action
-    = First
+    = Home
+    | Start
     | Verify Line
 
 
-init : State
+init : ( State, Cmd Action )
 init =
-    State (Station.find 0) Nothing 0
+    ( State Nothing Nothing 0
+    , Cmd.none
+    )
 
 
-update : Action -> State -> State
+update : Action -> State -> ( State, Cmd Action )
 update action state =
     case action of
-        First ->
-            State (Station.find 1) Nothing 0
+        Home ->
+            ( state, Cmd.none )
+
+        Start ->
+            ( { state | question = Just (Station.find 0) }, Cmd.none )
 
         Verify l ->
             let
                 answer =
-                    member l state.question.lines
+                    case state.question of
+                        Nothing ->
+                            False
+
+                        Just station ->
+                            member l station.lines
 
                 score =
                     case answer of
@@ -43,7 +54,7 @@ update action state =
                         False ->
                             state.score
             in
-            State (Station.find 1) (Just answer) score
+            ( { state | question = Just (Station.find 1), lastAnswer = Just answer, score = score }, Cmd.none )
 
 
 viewLine : Line -> Html Action
@@ -74,19 +85,26 @@ view state =
     div [ id "application" ]
         [ div [ id "header" ] [ h1 [] [ text "BVGame" ] ]
         , div [ id "body" ]
-            [ div [ class "title" ] [ h2 [] [ text state.question.name ] ]
-            , div [ class "status" ]
-                [ viewAnswer state.lastAnswer
-                , viewScore state.score
-                ]
-            , div [ class "options" ] (map viewLine Line.all)
-            ]
+            (case state.question of
+                Nothing ->
+                    [ div [ class "title" ] [ h2 [ class "start", onClick Start ] [ text "Start" ] ] ]
+
+                Just question ->
+                    [ div [ class "title" ] [ h2 [] [ text question.name ] ]
+                    , div [ class "status" ]
+                        [ viewAnswer state.lastAnswer
+                        , viewScore state.score
+                        ]
+                    , div [ class "options" ] (map viewLine Line.all)
+                    ]
+            )
         ]
 
 
 main =
-    Browser.sandbox
-        { init = init
+    Browser.element
+        { init = \() -> init
         , update = update
         , view = view
+        , subscriptions = \_ -> Sub.none
         }
