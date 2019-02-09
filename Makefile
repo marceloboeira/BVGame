@@ -3,19 +3,30 @@ WS ?= `which ws`
 LOCAL_PORT ?= 1928
 ELM ?= `which elm`
 ELM_TEST ?= `which elm-test`
-APPLICATION_ENTRYPOINT ?= src/Application.elm
-DIST_FOLDER = `pwd`/dist
+ELM_FORMAT ?= `which elm-format`
+HERE ?= `pwd`
+DIST_FOLDER = $(HERE)/dist
+SOURCE_FOLDER = $(HERE)/src
+APPLICATION_ENTRYPOINT ?= $(SOURCE_FOLDER)/Application.elm
 
 .PHONY: setup
 setup:
-	@$(NPM) install -g local-web-server elm
+	@$(NPM) install -g local-web-server elm elm-test elm-format
+
+.PHONY: format
+format:
+	@$(ELM_FORMAT) $(HERE) --upgrade --yes
+
+.PHONY: format_check
+format_check:
+	@$(ELM_FORMAT) $(HERE) --validate
 
 .PHONY: build
 build:
 	@$(ELM) make $(APPLICATION_ENTRYPOINT) --output $(DIST_FOLDER)/assets/application.js --optimize
 
 .PHONY: test
-test:
+test: format_check
 	@$(ELM_TEST)
 
 .PHONY: test_watch

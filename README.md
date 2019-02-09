@@ -27,3 +27,5 @@ Available commands:
 * `make setup` - One time setup of dependencies.
 * `make test` - Run the tests.
 * `make test_watch` - Run the tests watching for changes.
+* `make check_format` - Check if the code is formated
+* `make format` - Format the code following elm standards.
