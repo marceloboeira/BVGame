@@ -1,3 +1,14 @@
 language: elm
 elm: "0.19.0"
 node_js: "11.9"
+
+script: make test build
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: dist/
+  github_token: $GITHUB_TOKEN
+  committer-from-gh: true
+  on:
+    branch: master
