@@ -54,7 +54,7 @@ update action state =
                         False ->
                             state.score
             in
-            ( { state | question = Just (Station.find 1), lastAnswer = Just answer, score = score }, Cmd.none )
+            ( { state | question = Just (Station.find score), lastAnswer = Just answer, score = score }, Cmd.none )
 
 
 viewLine : Line -> Html Action
