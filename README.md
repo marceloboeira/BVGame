@@ -1,5 +1,8 @@
-# 💛 BVGame
-> An unofficial BVG Stations Game
+<p align="center">
+  <img src="https://github.com/marceloboeira/BVGame/blob/master/docs/bvg-logo.gif?raw=true" width="200">
+  <h3 align="center">BVGame</h3>
+  <p align="center">An unofficial BVG Stations Game<p>
+</p>
 
 ## Motivation
 
