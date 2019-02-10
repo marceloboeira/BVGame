@@ -88,7 +88,13 @@ update action state =
 
 viewLine : Line -> Html Action
 viewLine l =
-    button [ class "line", style "background-color" l.color, onClick (Verify l) ] [ text l.name ]
+    button
+        [ class "line"
+        , style "background-color" l.backgroundColor
+        , style "color" l.fontColor
+        , onClick (Verify l)
+        ]
+        [ text l.name ]
 
 
 viewScore : Int -> Html Action
