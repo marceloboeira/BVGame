@@ -8,5 +8,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Marcelo Boeira <me@marceloboeira.com> (https://marceloboeira.com)",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "vbb-lines-at": "^3.18.0",
+    "vbb-station-photos": "^2.0.1",
+    "vbb-stations": "^6.9.0"
+  }
 }

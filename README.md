@@ -9,13 +9,42 @@
   </p>
 </p>
 
-## Motivation
+# Motivation
 
 The ideia is to learn more about functional programming & front-end applications with Elm.
 
-### The Game
+## The Game
 
 The game is about Subway Stations and Lines from the Berliner Verkehrsbetriebe [BVG](https://www.bvg.de/en). The players must guess at least one train Line that cross a given station.
+
+# Architecture
+> How does it work?
+
+## Web
+> Coming soon
+
+### Data Pipeline
+> Gathering data for the game
+
+In order to gather information about the stations, a small pipeline was created, heavily inspired by [derhuerst](https://github.com/derhuerst) work on the [VBB libraries](https://github.com/derhuerst/vbb-modules).
+
+The output of the pipeline is copied to `dist/data/` as JSON files, consumed by the web-application as data source.
+
+## Contributing
+> Help us to improve the codebase
+
+### Development
+> Available commands
+
+* `make run` - Run the webserver at `http://localhost:1928`.
+* `make build` - Build the `application.js` file to the `dist/` folder.
+* `make setup` - One time setup of dependencies.
+* `make setup_pipeline` - Install dependencies for the pipeline. (It's triggered by the setup)
+* `make build_pipeline` - Run the pipeline and copy the files to the `dist/` folder.  (It's triggered by the setup)
+* `make test` - Run the tests.
+* `make test_watch` - Run the tests watching for changes.
+* `make check_format` - Check if the code is formated
+* `make format` - Format the code following elm standards.
 
 ## Changelog
 > See what changed over time
@@ -44,16 +73,9 @@ Technically:
 * No CSS/JS pipeline (uglify/minimize)
 * No HTML/CSS optmizations
 
-## Contributing
-> Help us to improve the codebase
+## Credits
 
-### Development
-> Available commands
-
-* `make run` - Run the webserver at `http://localhost:1928`.
-* `make build` - Build the `application.js` file to the `dist/` folder.
-* `make setup` - One time setup of dependencies.
-* `make test` - Run the tests.
-* `make test_watch` - Run the tests watching for changes.
-* `make check_format` - Check if the code is formated
-* `make format` - Format the code following elm standards.
+* Data Sources
+  * [derhuerst/vbb-stations](https://github.com/derhuerst/vbb-stations) - List of Stations
+  * [derhuerst/vbb-lines](https://github.com/derhuerst/vbb-lines) - List of Lines
+  * [Wikipedia](https://de.wikipedia.org/wiki/Liste_der_Berliner_U-Bahnhöfe)
