@@ -3,15 +3,26 @@ module Application exposing (Action(..), State, init, main, update, view, viewAn
 import BVG.Line as Line exposing (Line)
 import BVG.Station as Station exposing (Station)
 import Browser
-import Html exposing (Html, button, div, h1, h2, text)
+import Html exposing (Html, br, button, div, h1, h2, text)
 import Html.Attributes exposing (class, id, style)
 import Html.Events exposing (onClick)
 import List exposing (map, member)
 import String
 
 
+type Step
+    = NotStarted
+    | Started
+    | Finished
+
+
 type alias State =
-    { question : Maybe Station, lastAnswer : Maybe Bool, round : Int, score : Int }
+    { question : Maybe Station
+    , step : Step
+    , lastAnswer : Maybe Bool
+    , round : Int
+    , score : Int
+    }
 
 
 type Action
@@ -22,7 +33,7 @@ type Action
 
 init : ( State, Cmd Action )
 init =
-    ( State Nothing Nothing 0 0
+    ( State Nothing NotStarted Nothing 0 0
     , Cmd.none
     )
 
@@ -31,15 +42,22 @@ update : Action -> State -> ( State, Cmd Action )
 update action state =
     case action of
         Home ->
-            ( state, Cmd.none )
+            init
 
         Start ->
-            ( { state | question = Just (Station.find state.round) }, Cmd.none )
+            ( { state | question = Just (Station.find state.round), step = Started }, Cmd.none )
 
         Verify l ->
             let
                 newRound =
                     state.round + 1
+
+                newStep =
+                    if state.round >= 5 then
+                        Finished
+
+                    else
+                        Started
 
                 answer =
                     case state.question of
@@ -61,6 +79,7 @@ update action state =
                 | question = Just (Station.find newRound)
                 , lastAnswer = Just answer
                 , score = score
+                , step = newStep
                 , round = newRound
               }
             , Cmd.none
@@ -111,14 +130,29 @@ viewHeader =
 viewBody : State -> Html Action
 viewBody state =
     div [ id "body" ]
-        (case state.question of
-            Nothing ->
+        (case state.step of
+            NotStarted ->
                 [ div [ class "title" ] [ h2 [ class "start", onClick Start ] [ text "Start" ] ] ]
 
-            Just question ->
-                [ div [ class "title" ] [ h2 [] [ text question.name ] ]
-                , viewStatus state.lastAnswer state.score
-                , viewOptions Line.all
+            Started ->
+                case state.question of
+                    Nothing ->
+                        [ text "This should never happen" ]
+
+                    Just question ->
+                        [ div [ class "title" ] [ h2 [] [ text question.name ] ]
+                        , viewStatus state.lastAnswer state.score
+                        , viewOptions Line.all
+                        ]
+
+            Finished ->
+                [ div [ class "title" ]
+                    [ h2 [ class "start", onClick Home ]
+                        [ text "Congratulations!"
+                        , br [] []
+                        , text ("You have scored " ++ String.fromInt state.score ++ " points!")
+                        ]
+                    ]
                 ]
         )
 
