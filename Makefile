@@ -5,12 +5,23 @@ ELM ?= `which elm`
 ELM_TEST ?= `which elm-test`
 ELM_FORMAT ?= `which elm-format`
 HERE ?= `pwd`
-DIST_FOLDER = $(HERE)/dist
-SOURCE_FOLDER = $(HERE)/src
+DIST_FOLDER ?= $(HERE)/dist
+SOURCE_FOLDER ?= $(HERE)/src
 APPLICATION_ENTRYPOINT ?= $(SOURCE_FOLDER)/Application.elm
 
+PIPELINE_FOLDER ?= $(HERE)/pipeline
+
+.PHONY: setup_pipeline
+setup_pipeline:
+	@cd $(PIPELINE_FOLDER) && $(NPM) install
+
+.PHONY: build_pipeline
+build_pipeline:
+	@cd $(PIPELINE_FOLDER) && $(NPM) run pipeline
+	@cp $(PIPELINE_FOLDER)/output/*.json $(DIST_FOLDER)/data/
+
 .PHONY: setup
-setup:
+setup: setup_pipeline build_pipeline
 	@$(NPM) install -g local-web-server elm elm-test elm-format
 
 .PHONY: format

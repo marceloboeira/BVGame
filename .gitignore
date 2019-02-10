@@ -2,4 +2,8 @@
 elm-stuff
 
 # Dist
+dist/data/*.json
 dist/assets/application.js
+
+# Pipeline
+pipeline/output/*.json

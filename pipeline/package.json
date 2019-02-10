@@ -1,0 +1,12 @@
+{
+  "name": "bvgame-pipeline",
+  "version": "0.0.0",
+  "description": "Pipeline for BVGame data aggregation",
+  "main": "pipeline.js",
+  "scripts": {
+    "pipeline": "node pipeline.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marcelo Boeira <me@marceloboeira.com> (https://marceloboeira.com)",
+  "license": "MIT"
+}
