@@ -80,24 +80,44 @@ viewAnswer b =
             div [ class "answer", class "incorrect" ] [ text "Incorrect!" ]
 
 
+viewOptions : List Line -> Html Action
+viewOptions l =
+    div [ class "options" ] (map viewLine Line.all)
+
+
+viewStatus : Maybe Bool -> Int -> Html Action
+viewStatus answer score =
+    div [ class "status" ]
+        [ viewAnswer answer
+        , viewScore score
+        ]
+
+
+viewHeader : Html Action
+viewHeader =
+    div [ id "header" ] [ h1 [] [ text "BVGame" ] ]
+
+
+viewBody : State -> Html Action
+viewBody state =
+    div [ id "body" ]
+        (case state.question of
+            Nothing ->
+                [ div [ class "title" ] [ h2 [ class "start", onClick Start ] [ text "Start" ] ] ]
+
+            Just question ->
+                [ div [ class "title" ] [ h2 [] [ text question.name ] ]
+                , viewStatus state.lastAnswer state.score
+                , viewOptions Line.all
+                ]
+        )
+
+
 view : State -> Html Action
 view state =
     div [ id "application" ]
-        [ div [ id "header" ] [ h1 [] [ text "BVGame" ] ]
-        , div [ id "body" ]
-            (case state.question of
-                Nothing ->
-                    [ div [ class "title" ] [ h2 [ class "start", onClick Start ] [ text "Start" ] ] ]
-
-                Just question ->
-                    [ div [ class "title" ] [ h2 [] [ text question.name ] ]
-                    , div [ class "status" ]
-                        [ viewAnswer state.lastAnswer
-                        , viewScore state.score
-                        ]
-                    , div [ class "options" ] (map viewLine Line.all)
-                    ]
-            )
+        [ viewHeader
+        , viewBody state
         ]
 
 
