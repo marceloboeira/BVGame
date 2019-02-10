@@ -7,6 +7,7 @@ import Html exposing (Html, br, button, div, h1, h2, text)
 import Html.Attributes exposing (class, id, style)
 import Html.Events exposing (onClick)
 import List exposing (map, member)
+import Random exposing (Generator)
 import String
 
 
@@ -29,6 +30,7 @@ type Action
     = Home
     | Start
     | Verify Line
+    | NextQuestion Station
 
 
 init : ( State, Cmd Action )
@@ -38,6 +40,11 @@ init =
     )
 
 
+stationGenerator : Generator Station
+stationGenerator =
+    Random.map Station.find (Random.int 0 5)
+
+
 update : Action -> State -> ( State, Cmd Action )
 update action state =
     case action of
@@ -45,7 +52,10 @@ update action state =
             init
 
         Start ->
-            ( { state | question = Just (Station.find state.round), step = Started }, Cmd.none )
+            ( { state | step = Started }, Random.generate NextQuestion stationGenerator )
+
+        NextQuestion s ->
+            ( { state | question = Just s }, Cmd.none )
 
         Verify l ->
             let
@@ -76,13 +86,12 @@ update action state =
                             state.score
             in
             ( { state
-                | question = Just (Station.find newRound)
-                , lastAnswer = Just answer
+                | lastAnswer = Just answer
                 , score = score
                 , step = newStep
                 , round = newRound
               }
-            , Cmd.none
+            , Random.generate NextQuestion stationGenerator
             )
 
 
