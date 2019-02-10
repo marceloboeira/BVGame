@@ -11,7 +11,7 @@ import String
 
 
 type alias State =
-    { question : Maybe Station, lastAnswer : Maybe Bool, score : Int }
+    { question : Maybe Station, lastAnswer : Maybe Bool, round : Int, score : Int }
 
 
 type Action
@@ -22,7 +22,7 @@ type Action
 
 init : ( State, Cmd Action )
 init =
-    ( State Nothing Nothing 0
+    ( State Nothing Nothing 0 0
     , Cmd.none
     )
 
@@ -34,10 +34,13 @@ update action state =
             ( state, Cmd.none )
 
         Start ->
-            ( { state | question = Just (Station.find 0) }, Cmd.none )
+            ( { state | question = Just (Station.find state.round) }, Cmd.none )
 
         Verify l ->
             let
+                newRound =
+                    state.round + 1
+
                 answer =
                     case state.question of
                         Nothing ->
@@ -54,7 +57,14 @@ update action state =
                         False ->
                             state.score
             in
-            ( { state | question = Just (Station.find score), lastAnswer = Just answer, score = score }, Cmd.none )
+            ( { state
+                | question = Just (Station.find newRound)
+                , lastAnswer = Just answer
+                , score = score
+                , round = newRound
+              }
+            , Cmd.none
+            )
 
 
 viewLine : Line -> Html Action
