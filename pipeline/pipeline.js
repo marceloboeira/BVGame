@@ -1,7 +1,6 @@
 //TODO
 // Feature:
 // Gather photos
-// Generate a MD5 of the name for the IDs (since they are in theory unique)
 // Gather colors?
 //
 // Refactor
@@ -42,7 +41,7 @@ const mergeStation = (stations, station, lines) => {
   const stationName = cleanStationName(station["name"])
   if (lines.length > 0) {
     if (stations[stationName] == null) {
-      stations[stationName] = { "name": stationName, "lines": lines }
+      stations[stationName] = { "id": md5(stationName), "name": stationName, "lines": lines }
     } else {
       stations[stationName]["lines"] = lines.concat(stations[stationName]["lines"])
     }
@@ -63,7 +62,7 @@ const mergeLines = (lines, stationLines) => {
 const subwayLinesFor = (station) => {
   return vbbLinesAt[station["id"]]
     .filter(line => line["product"] == "subway")
-    .map(line => { return { "id": line["id"], "name": line["name"] } })
+    .map(line => { return { "id": md5(line["id"]), "name": line["name"] } })
 }
 
 const state = hashToArray(vbbStations).reduce((state, station) => {
