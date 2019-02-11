@@ -1,3 +1,14 @@
+/*
+ * Pipeline
+ * ================
+ *
+ * The pipeline uses libraries to gather information about BVG lines and stations
+ * to cross-reference, clean, and format them. They serve as the source for the game.
+ *
+ * At this point, only U-Bahn (subway) lines are supported, since the game is for BVG
+ * and both Tram/Bus lines are not so consistent with station names.
+ *
+ */
 const vbbStations = require("vbb-stations/full.json")
 const vbbLinesAt = require("vbb-lines-at")
 const fileSystem = require("fs")
@@ -19,6 +30,7 @@ const toFile = (name, content) => {
   })
 }
 
+// Represents only UBahn stations so far
 const colorFor = (line) => {
   return {
     "U1": { "background": "#59ff00", "font": "#fff"  },
@@ -66,7 +78,7 @@ const mergeLines = (lines, stationLines) => {
   }, lines)
 }
 
-const subwayLinesFor = (station, full = false) => {
+const subwayLinesFor = (station) => {
   return vbbLinesAt[station["id"]]
     .filter(line => line["product"] == "subway")
     .map(line => {

@@ -20,20 +20,28 @@ The game is about Subway Stations and Lines from the Berliner Verkehrsbetriebe [
 # Architecture
 > How does it work?
 
-## Web
-> Coming soon
+<a href="https://marceloboeira.com/BVGame">
+  <img src="https://github.com/marceloboeira/BVGame/blob/master/docs/diagram.png?raw=true">
+</a>
 
-### Data Pipeline
+## Web
+> Static SPA served with GitHub Pages
+
+The code of the application is written in Elm. During build, the Elm files are compiled to a single Javascript, `application.js` that is served statically, together with raw CSS and HTML files. Everything under `dist/` is served with Github Pages, built from the `master` branch of this repo to the `gh-pages` branch by Travis-CI.
+
+The application also requires data coming from the `dist/data` folder, which is generated from the pipeline.
+
+## Data Pipeline
 > Gathering data for the game
 
 In order to gather information about the stations, a small pipeline was created, heavily inspired by [derhuerst](https://github.com/derhuerst) work on the [VBB libraries](https://github.com/derhuerst/vbb-modules).
 
 The output of the pipeline is copied to `dist/data/` as JSON files, consumed by the web-application as data source.
 
-## Contributing
+# Contributing
 > Help us to improve the codebase
 
-### Development
+## Development
 > Available commands
 
 * `make run` - Run the webserver at `http://localhost:1928`.
