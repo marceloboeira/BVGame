@@ -1,13 +1,5 @@
-//TODO
-// Feature:
-// Gather photos
-// Gather colors?
-//
-// Refactor
-// Receive options as parameters (output path)
 const vbbStations = require("vbb-stations/full.json")
 const vbbLinesAt = require("vbb-lines-at")
-const vbbStationPhotos = require("vbb-station-photos")
 const fileSystem = require("fs")
 const md5 = require("md5")
 
