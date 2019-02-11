@@ -19,6 +19,21 @@ const toFile = (name, content) => {
   })
 }
 
+const colorFor = (line) => {
+  return {
+    "U1": { "background": "#59ff00", "font": "#fff"  },
+    "U2": { "background": "#ff3300", "font": "#fff"  },
+    "U3": { "background": "#00ff66", "font": "#fff"  },
+    "U4": { "background": "#ffe600", "font": "#000"  },
+    "U5": { "background": "#664019", "font": "#fff"  },
+    "U55": { "background": "#664019", "font": "#fff"  },
+    "U6": { "background": "#4d66ff", "font": "#fff"  },
+    "U7": { "background": "#33ccff", "font": "#fff"  },
+    "U8": { "background": "#0061da", "font": "#fff"  },
+    "U9": { "background": "#ff7300", "font": "#fff"  }
+  }[line]
+}
+
 /* Regexp to clean the names
  * From                            | To
  * S+U Neukölln (Berlin) [U7]      | Neukölln
@@ -51,10 +66,16 @@ const mergeLines = (lines, stationLines) => {
   }, lines)
 }
 
-const subwayLinesFor = (station) => {
+const subwayLinesFor = (station, full = false) => {
   return vbbLinesAt[station["id"]]
     .filter(line => line["product"] == "subway")
-    .map(line => { return { "id": md5(line["id"]), "name": line["name"] } })
+    .map(line => {
+      return {
+        "id": md5(line["id"]),
+        "name": line["name"],
+        "color": colorFor(line["name"]),
+      }
+    })
 }
 
 const state = hashToArray(vbbStations).reduce((state, station) => {
