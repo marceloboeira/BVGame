@@ -3,22 +3,28 @@ module Application exposing (Action(..), State, init, main, update, view, viewAn
 import BVG.Line as Line exposing (Line)
 import BVG.Station as Station exposing (Station)
 import Browser
+import Debug exposing (log)
 import Html exposing (Html, br, button, div, h1, h2, text)
 import Html.Attributes exposing (class, id, style)
 import Html.Events exposing (onClick)
-import List exposing (map, member)
+import Http
+import Json.Decode as D
+import List exposing (head, map, member, sortBy, tail)
 import Random exposing (Generator)
 import String
 
 
 type Step
-    = NotStarted
+    = Loading
+    | NotStarted
     | Started
     | Finished
 
 
 type alias State =
     { question : Maybe Station
+    , lines : List Line
+    , stations : List Station
     , step : Step
     , lastAnswer : Maybe Bool
     , round : Int
@@ -28,21 +34,31 @@ type alias State =
 
 type Action
     = Home
+    | GotLinesData (Result Http.Error (List Line))
+    | GotStationsData (Result Http.Error (List Station))
     | Start
     | Verify Line
-    | NextQuestion Station
 
 
 init : ( State, Cmd Action )
 init =
-    ( State Nothing NotStarted Nothing 0 0
-    , Cmd.none
-    )
+    ( State Nothing [] [] Loading Nothing 0 0, fetchLines GotLinesData )
 
 
-stationGenerator : Generator Station
-stationGenerator =
-    Random.map Station.find (Random.int 0 5)
+fetchLines : (Result Http.Error (List Line) -> Action) -> Cmd Action
+fetchLines action =
+    Http.get
+        { url = "./data/lines.json"
+        , expect = Http.expectJson action (D.list Line.decoder)
+        }
+
+
+fetchStations : (Result Http.Error (List Station) -> Action) -> Cmd Action
+fetchStations action =
+    Http.get
+        { url = "./data/stations.json"
+        , expect = Http.expectJson action (D.list Station.decoder)
+        }
 
 
 update : Action -> State -> ( State, Cmd Action )
@@ -51,14 +67,40 @@ update action state =
         Home ->
             init
 
-        Start ->
-            ( { state | step = Started }, Random.generate NextQuestion stationGenerator )
+        GotLinesData (Ok l) ->
+            ( { state | lines = sortBy .name l }, fetchStations GotStationsData )
 
-        NextQuestion s ->
-            ( { state | question = Just s }, Cmd.none )
+        GotLinesData (Err _) ->
+            ( { state | lines = [] }, Cmd.none )
+
+        GotStationsData (Ok s) ->
+            ( { state | step = NotStarted, stations = s }, Cmd.none )
+
+        GotStationsData (Err _) ->
+            ( { state | stations = [] }, Cmd.none )
+
+        Start ->
+            let
+                f =
+                    case tail state.stations of
+                        Just s ->
+                            s
+
+                        Nothing ->
+                            []
+            in
+            ( { state | step = Started, question = head state.stations, stations = f }, Cmd.none )
 
         Verify l ->
             let
+                f =
+                    case tail state.stations of
+                        Just s ->
+                            s
+
+                        Nothing ->
+                            []
+
                 newRound =
                     state.round + 1
 
@@ -88,10 +130,12 @@ update action state =
             ( { state
                 | lastAnswer = Just answer
                 , score = score
+                , question = head state.stations
+                , stations = f
                 , step = newStep
                 , round = newRound
               }
-            , Random.generate NextQuestion stationGenerator
+            , Cmd.none
             )
 
 
@@ -99,8 +143,8 @@ viewLine : Line -> Html Action
 viewLine l =
     button
         [ class "line"
-        , style "background-color" l.backgroundColor
-        , style "color" l.fontColor
+        , style "background-color" l.color.background
+        , style "color" l.color.font
         , onClick (Verify l)
         ]
         [ text l.name ]
@@ -126,7 +170,7 @@ viewAnswer b =
 
 viewOptions : List Line -> Html Action
 viewOptions l =
-    div [ class "options" ] (map viewLine Line.all)
+    div [ class "options" ] (map viewLine l)
 
 
 viewStatus : Maybe Bool -> Int -> Html Action
@@ -146,6 +190,9 @@ viewBody : State -> Html Action
 viewBody state =
     div [ id "body" ]
         (case state.step of
+            Loading ->
+                [ div [ class "title" ] [ h2 [] [ text "Loading" ] ] ]
+
             NotStarted ->
                 [ div [ class "title" ] [ h2 [ class "start", onClick Start ] [ text "Start" ] ] ]
 
@@ -157,7 +204,7 @@ viewBody state =
                     Just question ->
                         [ div [ class "title" ] [ h2 [] [ text question.name ] ]
                         , viewStatus state.lastAnswer state.score
-                        , viewOptions Line.all
+                        , viewOptions state.lines
                         ]
 
             Finished ->

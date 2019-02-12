@@ -1,38 +1,32 @@
-module BVG.Line exposing (Line, all, find)
+module BVG.Line exposing (Line, decoder)
 
+import Json.Decode exposing (Decoder, field, map2, map3, string)
 import List.Extra exposing (getAt)
 
 
-type alias Line =
-    { name : String
-    , backgroundColor : String
-    , fontColor : String
+type alias Color =
+    { background : String
+    , font : String
     }
 
 
-
--- TODO: Load from a JSON file
-
-
-all : List Line
-all =
-    [ Line "U1" "#59ff00" "#fff"
-    , Line "U2" "#ff3300" "#fff"
-    , Line "U3" "#00ff66" "#fff"
-    , Line "U4" "#ffe600" "#000"
-    , Line "U5" "#664019" "#fff"
-    , Line "U6" "#4d66ff" "#fff"
-    , Line "U7" "#33ccff" "#fff"
-    , Line "U8" "#0061da" "#fff"
-    , Line "U9" "#ff7300" "#fff"
-    ]
+type alias Line =
+    { id : String
+    , name : String
+    , color : Color
+    }
 
 
-find : Int -> Line
-find x =
-    case getAt (x - 1) all of
-        Just l ->
-            l
+colorDecoder : Decoder Color
+colorDecoder =
+    map2 Color
+        (field "background" string)
+        (field "font" string)
 
-        Nothing ->
-            Line "" "" ""
+
+decoder : Decoder Line
+decoder =
+    map3 Line
+        (field "id" string)
+        (field "name" string)
+        (field "color" colorDecoder)
