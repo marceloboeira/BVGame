@@ -8,7 +8,7 @@ import Html exposing (Html, br, button, div, h1, h2, text)
 import Html.Attributes exposing (class, id, style)
 import Html.Events exposing (onClick)
 import Http
-import List exposing (head, map, member, sortBy, tail)
+import List exposing (map, member, sortBy, take)
 import Random exposing (Generator)
 import String
 
@@ -16,17 +16,15 @@ import String
 type Step
     = Loading
     | NotStarted
-    | Started
+    | Ask Station
     | Finished
 
 
 type alias State =
-    { question : Maybe Station
-    , lines : List Line
+    { lines : List Line
     , stations : List Station
     , step : Step
     , lastAnswer : Maybe Bool
-    , round : Int
     , score : Int
     }
 
@@ -36,13 +34,32 @@ type Action
     | GotLinesData (Result Http.Error (List Line))
     | GotStationsData (Result Http.Error (List Station))
     | Start
-    | Verify Line
+    | Verify Station Line
+
+
+
+-- Number of game rounds
+
+
+rounds : Int
+rounds =
+    5
+
+
+fetchLines : Cmd Action
+fetchLines =
+    Line.fetch "./data/lines.json" GotLinesData
+
+
+fetchStations : Cmd Action
+fetchStations =
+    Station.fetch "./data/stations.json" GotStationsData
 
 
 init : ( State, Cmd Action )
 init =
-  -- TODO use Cmd.batch
-    ( State Nothing [] [] Loading Nothing 0 0, Line.fetch "./data/lines.json" GotLinesData )
+    -- TODO use Cmd.batch
+    ( State [] [] Loading Nothing 0, fetchLines )
 
 
 update : Action -> State -> ( State, Cmd Action )
@@ -52,56 +69,32 @@ update action state =
             init
 
         GotLinesData (Ok l) ->
-            ( { state | lines = sortBy .name l }, Station.fetch "./data/stations.json" GotStationsData )
+            ( { state | lines = sortBy .name l }, fetchStations )
 
         GotLinesData (Err _) ->
-            ( { state | lines = [] }, Cmd.none )
+            ( state, Cmd.none )
 
-        GotStationsData (Ok s) ->
-            ( { state | step = NotStarted, stations = s }, Cmd.none )
+        GotStationsData (Ok stations) ->
+            ( { state | step = NotStarted, stations = take rounds stations }, Cmd.none )
 
         GotStationsData (Err _) ->
-            ( { state | stations = [] }, Cmd.none )
+            ( state, Cmd.none )
 
         Start ->
+            case state.stations of
+                station :: stations ->
+                    ( { state | step = Ask station, stations = stations }, Cmd.none )
+
+                _ ->
+                    ( { state | step = Loading }, Cmd.none )
+
+        Verify lastStation line ->
             let
-                f =
-                    case tail state.stations of
-                        Just s ->
-                            s
-
-                        Nothing ->
-                            []
-            in
-            ( { state | step = Started, question = head state.stations, stations = f }, Cmd.none )
-
-        Verify l ->
-            let
-                f =
-                    case tail state.stations of
-                        Just s ->
-                            s
-
-                        Nothing ->
-                            []
-
-                newRound =
-                    state.round + 1
-
-                newStep =
-                    if state.round >= 5 then
-                        Finished
-
-                    else
-                        Started
-
                 answer =
-                    case state.question of
-                        Nothing ->
-                            False
+                    member line lastStation.lines
 
-                        Just station ->
-                            member l station.lines
+                lastAnswer =
+                    Just answer
 
                 score =
                     case answer of
@@ -111,27 +104,36 @@ update action state =
                         False ->
                             state.score
             in
-            ( { state
-                | lastAnswer = Just answer
-                , score = score
-                , question = head state.stations
-                , stations = f
-                , step = newStep
-                , round = newRound
-              }
-            , Cmd.none
-            )
+            case state.stations of
+                station :: stations ->
+                    ( { state
+                        | score = score
+                        , lastAnswer = lastAnswer
+                        , step = Ask station
+                        , stations = stations
+                      }
+                    , Cmd.none
+                    )
+
+                _ ->
+                    ( { state
+                        | score = score
+                        , lastAnswer = lastAnswer
+                        , step = Finished
+                      }
+                    , Cmd.none
+                    )
 
 
-viewLine : Line -> Html Action
-viewLine l =
+viewLine : Station -> Line -> Html Action
+viewLine station line =
     button
         [ class "line"
-        , style "background-color" l.color.background
-        , style "color" l.color.font
-        , onClick (Verify l)
+        , style "background-color" line.color.background
+        , style "color" line.color.font
+        , onClick (Verify station line)
         ]
-        [ text l.name ]
+        [ text line.name ]
 
 
 viewScore : Int -> Html Action
@@ -152,9 +154,9 @@ viewAnswer b =
             div [ class "answer", class "incorrect" ] [ text "Incorrect!" ]
 
 
-viewOptions : List Line -> Html Action
-viewOptions l =
-    div [ class "options" ] (map viewLine l)
+viewOptions : List Line -> Station -> Html Action
+viewOptions lines station =
+    div [ class "options" ] (map (viewLine station) lines)
 
 
 viewStatus : Maybe Bool -> Int -> Html Action
@@ -180,16 +182,11 @@ viewBody state =
             NotStarted ->
                 [ div [ class "title" ] [ h2 [ class "start", onClick Start ] [ text "Start" ] ] ]
 
-            Started ->
-                case state.question of
-                    Nothing ->
-                        [ text "This should never happen" ]
-
-                    Just question ->
-                        [ div [ class "title" ] [ h2 [] [ text question.name ] ]
-                        , viewStatus state.lastAnswer state.score
-                        , viewOptions state.lines
-                        ]
+            Ask station ->
+                [ div [ class "title" ] [ h2 [] [ text station.name ] ]
+                , viewStatus state.lastAnswer state.score
+                , viewOptions state.lines station
+                ]
 
             Finished ->
                 [ div [ class "title" ]
