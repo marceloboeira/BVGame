@@ -1,6 +1,7 @@
-module BVG.Line exposing (Line, decoder)
+module BVG.Line exposing (Line, decoder, fetch)
 
-import Json.Decode exposing (Decoder, field, map2, map3, string)
+import Http
+import Json.Decode exposing (Decoder, field, list, map2, map3, string)
 import List.Extra exposing (getAt)
 
 
@@ -30,3 +31,11 @@ decoder =
         (field "id" string)
         (field "name" string)
         (field "color" colorDecoder)
+
+
+fetch : String -> (Result Http.Error (List Line) -> a) -> Cmd a
+fetch url action =
+    Http.get
+        { url = url
+        , expect = Http.expectJson action (list decoder)
+        }

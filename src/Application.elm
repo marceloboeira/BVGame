@@ -8,7 +8,6 @@ import Html exposing (Html, br, button, div, h1, h2, text)
 import Html.Attributes exposing (class, id, style)
 import Html.Events exposing (onClick)
 import Http
-import Json.Decode as D
 import List exposing (head, map, member, sortBy, tail)
 import Random exposing (Generator)
 import String
@@ -42,23 +41,8 @@ type Action
 
 init : ( State, Cmd Action )
 init =
-    ( State Nothing [] [] Loading Nothing 0 0, fetchLines GotLinesData )
-
-
-fetchLines : (Result Http.Error (List Line) -> Action) -> Cmd Action
-fetchLines action =
-    Http.get
-        { url = "./data/lines.json"
-        , expect = Http.expectJson action (D.list Line.decoder)
-        }
-
-
-fetchStations : (Result Http.Error (List Station) -> Action) -> Cmd Action
-fetchStations action =
-    Http.get
-        { url = "./data/stations.json"
-        , expect = Http.expectJson action (D.list Station.decoder)
-        }
+  -- TODO use Cmd.batch
+    ( State Nothing [] [] Loading Nothing 0 0, Line.fetch "./data/lines.json" GotLinesData )
 
 
 update : Action -> State -> ( State, Cmd Action )
@@ -68,7 +52,7 @@ update action state =
             init
 
         GotLinesData (Ok l) ->
-            ( { state | lines = sortBy .name l }, fetchStations GotStationsData )
+            ( { state | lines = sortBy .name l }, Station.fetch "./data/stations.json" GotStationsData )
 
         GotLinesData (Err _) ->
             ( { state | lines = [] }, Cmd.none )
