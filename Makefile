@@ -8,6 +8,7 @@ HERE ?= `pwd`
 DIST_FOLDER ?= $(HERE)/dist
 SOURCE_FOLDER ?= $(HERE)/src
 APPLICATION_ENTRYPOINT ?= $(SOURCE_FOLDER)/Application.elm
+APPLICATION_OUTPUT ?= $(DIST_FOLDER)/assets/application.js
 
 PIPELINE_FOLDER ?= $(HERE)/pipeline
 
@@ -34,7 +35,7 @@ format_check:
 
 .PHONY: build
 build:
-	@$(ELM) make $(APPLICATION_ENTRYPOINT) --output $(DIST_FOLDER)/assets/application.js --optimize
+	@$(ELM) make $(APPLICATION_ENTRYPOINT) --output $(APPLICATION_OUTPUT) --optimize
 
 .PHONY: test
 test: format_check
