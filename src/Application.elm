@@ -10,6 +10,7 @@ import Html.Events exposing (onClick)
 import Http
 import List exposing (map, member, sortBy, take)
 import Random exposing (Generator)
+import Random.List
 import String
 
 
@@ -33,6 +34,7 @@ type Action
     = Home
     | GotLinesData (Result Http.Error (List Line))
     | GotStationsData (Result Http.Error (List Station))
+    | GotShuffledStations (List Station)
     | Start
     | Verify Station Line
 
@@ -62,6 +64,11 @@ init =
     ( State [] [] Loading Nothing 0, fetchLines )
 
 
+shuffle : List Station -> Cmd Action
+shuffle stations =
+    Random.generate GotShuffledStations (Random.List.shuffle stations)
+
+
 update : Action -> State -> ( State, Cmd Action )
 update action state =
     case action of
@@ -75,10 +82,13 @@ update action state =
             ( state, Cmd.none )
 
         GotStationsData (Ok stations) ->
-            ( { state | step = NotStarted, stations = take rounds stations }, Cmd.none )
+            ( state, shuffle stations )
 
         GotStationsData (Err _) ->
             ( state, Cmd.none )
+
+        GotShuffledStations stations ->
+            ( { state | step = NotStarted, stations = take rounds stations }, Cmd.none )
 
         Start ->
             case state.stations of
