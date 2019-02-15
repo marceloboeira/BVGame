@@ -23,7 +23,7 @@ body {
 #application {
   border: 10px solid white;
   margin: 200px auto;
-  width: 500px;
+  width: 600px;
 }
 
 #header {
@@ -43,6 +43,7 @@ body {
   background-color: #222;
   color: #bbb9b4;
   border-bottom: 1px solid #bbb9b4;
+  min-height: 80px;
 }
 
 #body .title h2 {
