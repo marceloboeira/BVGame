@@ -3,17 +3,17 @@ article,aside,details,figcaption,figure,footer,header,hgroup,hr,menu,nav,section
 
 @font-face {
   font-family: "Sys 1.1";
-  src: url("http://db.onlinewebfonts.com/t/d098f0168ee2afc971401f101ac6d37e.eot");
-  src: url("http://db.onlinewebfonts.com/t/d098f0168ee2afc971401f101ac6d37e.eot?#iefix") format("embedded-opentype"),
-       url("http://db.onlinewebfonts.com/t/d098f0168ee2afc971401f101ac6d37e.woff2") format("woff2"),
-       url("http://db.onlinewebfonts.com/t/d098f0168ee2afc971401f101ac6d37e.woff") format("woff"),
-       url("http://db.onlinewebfonts.com/t/d098f0168ee2afc971401f101ac6d37e.ttf") format("truetype"),
-       url("http://db.onlinewebfonts.com/t/d098f0168ee2afc971401f101ac6d37e.svg#Sys 1.1") format("svg");
+  src: url("./sys1-1.eot");
+  src: url("./sys1-1.eot?#iefix") format("embedded-opentype"),
+       url("./sys1-1.woff2") format("woff2"),
+       url("./sys1-1.woff") format("woff"),
+       url("./sys1-1.ttf") format("truetype"),
+       url("./sys1-1.svg#Sys 1.1") format("svg");
 }
 
 @font-face {
-  font-family: 'b2987b03bc15b7e23436328c4731d';
-  src: url('//fast.fonts.net/dv2/3/5f61b9ac-300a-4ea1-9bd5-452b37711319.woff?d44f19a684109620e4841471ae90e8186df205ea3b7e1c0d250a32d125adc27a69c5a6864d6ab62481f78c18b7a346bdbe432e4146d4f31e17e2d0f3f127fdd2eb43afc4cbcc0f9cb967ecc47dd3d385feb313630217444a5d') format('woff');
+  font-family: "transit";
+  src: url("./TransitWeb.woff") format('woff');
 }
 
 body {
@@ -47,7 +47,7 @@ body {
 }
 
 #body .title h2 {
-  font-family: 'b2987b03bc15b7e23436328c4731d';
+  font-family: 'transit';
   font-size: 3em;
   text-align: center;
 }
@@ -64,7 +64,7 @@ body {
 
 #body .options button.line {
   flex: 1;
-  font-family: 'b2987b03bc15b7e23436328c4731d';
+  font-family: "transit";
   min-width: 50px;
   cursor: pointer;
   border: 0;
