@@ -63,7 +63,7 @@ suite =
                 \() ->
                     baseState
                         |> Expect.equal (State [] [] State.Loading Nothing 0)
-            , test "triggers lines to be fetched" <|
+            , test "trigger lines to be fetched" <|
                 \() ->
                     State.init
                         |> Tuple.second
@@ -71,13 +71,13 @@ suite =
             ]
         , describe "update"
             [ describe "when Home"
-                [ test "does not change the state" <|
+                [ test "do not change the state" <|
                     \() ->
                         baseState
                             |> State.update State.Home
                             |> Tuple.first
                             |> Expect.equal (Tuple.first State.init)
-                , test "triggers lines to be fetched" <|
+                , test "trigger lines to be fetched" <|
                     \() ->
                         baseState
                             |> State.update State.Home
@@ -86,7 +86,7 @@ suite =
                 ]
             , describe "when GotLinesData"
                 [ describe "and the result is successful"
-                    [ test "updates lines on state" <|
+                    [ test "update lines on state" <|
                         \() ->
                             baseState
                                 |> State.update (State.GotLinesData (Ok unsortedLines))
@@ -113,7 +113,7 @@ suite =
                 ]
             , describe "when GotStationsData"
                 [ describe "and the result is successful"
-                    [ test "does not update the state" <|
+                    [ test "do not update the state" <|
                         \() ->
                             State.init
                                 |> Tuple.first
@@ -142,7 +142,7 @@ suite =
                                 |> Expect.equal (State.Error "Couldn't load stations")
                     ]
                 , describe "when GotShuffledStations"
-                    [ test "updates stations on state" <|
+                    [ test "update stations on state" <|
                         \() ->
                             State.init
                                 |> Tuple.first
@@ -227,7 +227,7 @@ suite =
                                     |> Tuple.first
                                     |> .lastAnswer
                                     |> Expect.equal (Just False)
-                        , test "does not update the score" <|
+                        , test "do not update the score" <|
                             \() ->
                                 { baseState | stations = shuffledStations, score = 0 }
                                     |> State.update (State.Verify sampleStation1 lineU)
@@ -268,7 +268,7 @@ suite =
                                     |> Tuple.first
                                     |> .lastAnswer
                                     |> Expect.equal (Just False)
-                        , test "does not update the score" <|
+                        , test "do not update the score" <|
                             \() ->
                                 { baseState | stations = [], score = 0 }
                                     |> State.update (State.Verify sampleStation1 lineU)
