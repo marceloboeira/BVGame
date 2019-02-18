@@ -59,6 +59,25 @@ The output of the pipeline is copied to `dist/data/` as JSON files, consumed by 
 ## Changelog
 > See what changed over time
 
+### v0.1.0 - Welcome Data
+
+The game is still raw, but it has some interesting features.
+
+Features:
+* A data pipeline downloads data from BVG/VBB for stations and lines
+* Randomically select stations (makes the game less predictable and more interactive)
+* Better handling of errors (the user now knows if something didn't work well with an Error page)
+
+Bug fixes:
+* CSS adjustments
+
+Technicall improvements:
+* Less usage of state for the game functionality
+* Better management of memory, but keeping only relevant stations
+* Better update-loop and rendering by storing the Step of the game
+* State and View are now modules
+* State has now a full suite of tests
+
 ### v0.0.1 - First "playbable"
 
 Up to this point the game is quite raw:
