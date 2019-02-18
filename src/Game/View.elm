@@ -4,7 +4,7 @@ import BVG.Line as Line exposing (Line)
 import BVG.Station as Station exposing (Station)
 import Game.State as State exposing (Action, State)
 import Html exposing (Html, br, button, div, h1, h2, text)
-import Html.Attributes exposing (class, id, style)
+import Html.Attributes exposing (class, id, style, title)
 import Html.Events exposing (onClick)
 import List exposing (map)
 
@@ -56,6 +56,11 @@ viewLoading =
     div [ class "title" ] [ h2 [] [ text "Loading" ] ]
 
 
+viewError : String -> Html Action
+viewError err =
+    div [ class "title" ] [ h2 [ title err ] [ text "Error" ] ]
+
+
 viewNotStarted : Html Action
 viewNotStarted =
     div [ class "title" ] [ h2 [ class "start", onClick State.Start ] [ text "Start" ] ]
@@ -83,6 +88,9 @@ viewBody state =
         (case state.step of
             State.Loading ->
                 [ viewLoading ]
+
+            State.Error e ->
+                [ viewError e ]
 
             State.NotStarted ->
                 [ viewNotStarted ]

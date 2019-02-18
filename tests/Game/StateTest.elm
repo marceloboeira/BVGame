@@ -101,12 +101,14 @@ suite =
                                 |> Expect.equal State.fetchStations
                     ]
                 , describe "and the result is not sucessfull"
-                    [ test "does nothing" <|
+                    [ test "update the state with step to Error" <|
                         \() ->
                             State.init
                                 |> Tuple.first
                                 |> State.update (State.GotLinesData (Result.Err Http.NetworkError))
-                                |> Expect.equal ( Tuple.first State.init, Cmd.none )
+                                |> Tuple.first
+                                |> .step
+                                |> Expect.equal (State.Error "Couldn't load lines")
                     ]
                 ]
             , describe "when GotStationsData"
@@ -130,12 +132,14 @@ suite =
                     -- TODO: fix this test, it doesn't work with (State.shuffle(unshuffledStations))
                     ]
                 , describe "and the result is not sucessfull"
-                    [ test "does nothing" <|
+                    [ test "update the state with step to Error" <|
                         \() ->
                             State.init
                                 |> Tuple.first
                                 |> State.update (State.GotStationsData (Result.Err Http.NetworkError))
-                                |> Expect.equal ( Tuple.first State.init, Cmd.none )
+                                |> Tuple.first
+                                |> .step
+                                |> Expect.equal (State.Error "Couldn't load stations")
                     ]
                 , describe "when GotShuffledStations"
                     [ test "updates stations on state" <|
@@ -174,13 +178,13 @@ suite =
                                 |> Expect.equal [ sampleStation2, sampleStation3 ]
                     ]
                 , describe "and the state is not ready"
-                    [ test "set the step to Loading" <|
+                    [ test "update the state with step to Error " <|
                         \() ->
                             { baseState | stations = [] }
                                 |> State.update State.Start
                                 |> Tuple.first
                                 |> .step
-                                |> Expect.equal State.Loading
+                                |> Expect.equal (State.Error "Couldn't start the game")
                     ]
                 ]
             , describe "when Verify"
