@@ -1,4 +1,4 @@
-module BVG.Line exposing (Line, decoder, fetch)
+module BVG.Line exposing (Color, Line, decoder, fetch)
 
 import Http
 import Json.Decode exposing (Decoder, field, list, map2, map3, string)
