@@ -1,4 +1,4 @@
-module Game.State exposing (Action(..), State, Step(..), fetchLines, fetchStations, init, rounds, shuffle, update)
+module Game.State exposing (Action(..), State, Step(..), fetchLines, fetchStations, init, shuffle, update)
 
 import BVG.Line as Line exposing (Line)
 import BVG.Station as Station exposing (Station)
@@ -7,6 +7,7 @@ import List exposing (map, member, sortBy, take)
 import Random exposing (Generator)
 import Random.List
 import String
+import Time
 
 
 type Step
@@ -19,6 +20,7 @@ type Step
 
 type Action
     = Home
+    | Tick Time.Posix
     | GotLinesData (Result Http.Error (List Line))
     | GotStationsData (Result Http.Error (List Station))
     | GotShuffledStations (List Station)
@@ -32,12 +34,13 @@ type alias State =
     , step : Step
     , lastAnswer : Maybe Bool
     , score : Int
+    , timeLeft : Int
     }
 
 
-rounds : Int
-rounds =
-    5
+roundTime : Int
+roundTime =
+    30
 
 
 fetchLines : Cmd Action
@@ -57,7 +60,7 @@ shuffle stations =
 
 init : ( State, Cmd Action )
 init =
-    ( State [] [] Loading Nothing 0, fetchLines )
+    ( State [] [] Loading Nothing 0 roundTime, fetchLines )
 
 
 update : Action -> State -> ( State, Cmd Action )
@@ -79,7 +82,23 @@ update action state =
             ( { state | step = Error "Couldn't load stations" }, Cmd.none )
 
         GotShuffledStations stations ->
-            ( { state | step = NotStarted, stations = take rounds stations }, Cmd.none )
+            ( { state | step = NotStarted, stations = stations }, Cmd.none )
+
+        Tick _ ->
+            case state.step of
+                Ask _ ->
+                    let
+                        time =
+                            state.timeLeft - 1
+                    in
+                    if time <= 0 then
+                        ( { state | step = Finished }, Cmd.none )
+
+                    else
+                        ( { state | timeLeft = time }, Cmd.none )
+
+                _ ->
+                    ( state, Cmd.none )
 
         Start ->
             case state.stations of

@@ -6,6 +6,7 @@ import Expect exposing (Expectation)
 import Game.State as State exposing (Action, State)
 import Http
 import Test exposing (..)
+import Time
 import Tuple
 
 
@@ -62,7 +63,7 @@ suite =
             [ test "return the default state" <|
                 \() ->
                     baseState
-                        |> Expect.equal (State [] [] State.Loading Nothing 0)
+                        |> Expect.equal (State [] [] State.Loading Nothing 0 30)
             , test "trigger lines to be fetched" <|
                 \() ->
                     State.init
@@ -187,6 +188,36 @@ suite =
                                 |> Expect.equal (State.Error "Couldn't start the game")
                     ]
                 ]
+            , describe "when Tick"
+                [ describe "and the state is Ask"
+                    [ describe "and there is still time left"
+                        [ test "update the state decreasing the timeLeft" <|
+                            \() ->
+                                { baseState | step = State.Ask sampleStation1, timeLeft = 10 }
+                                    |> State.update (State.Tick (Time.millisToPosix 1000))
+                                    |> Tuple.first
+                                    |> .timeLeft
+                                    |> Expect.equal 9
+                        ]
+                    , describe "and there is no time left"
+                        [ test "update the state with step to Finished" <|
+                            \() ->
+                                { baseState | step = State.Ask sampleStation1, timeLeft = 1 }
+                                    |> State.update (State.Tick (Time.millisToPosix 1000))
+                                    |> Tuple.first
+                                    |> .step
+                                    |> Expect.equal State.Finished
+                        ]
+                    ]
+                , describe "and the state is not Ask"
+                    [ test "do not update the state" <|
+                        \() ->
+                            baseState
+                                |> State.update (State.Tick (Time.millisToPosix 1000))
+                                |> Tuple.first
+                                |> Expect.equal baseState
+                    ]
+                ]
             , describe "when Verify"
                 [ describe "and it is not the last round"
                     [ test "update the state setting the step to Ask (head of stations)" <|
@@ -237,7 +268,7 @@ suite =
                         ]
                     ]
                 , describe "and it is the last round"
-                    [ test "set the step to Finished" <|
+                    [ test "update the state with the step Finished" <|
                         \() ->
                             { baseState | stations = [] }
                                 |> State.update (State.Verify sampleStation1 lineA)
