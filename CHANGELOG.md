@@ -1,6 +1,24 @@
 # Changelog
 > See what changed over time
 
+## v0.2.0 - Timeout
+
+The game now has a new design and a time constraint.
+
+Features:
+* Timeout after 30s
+* Unlimited stations
+* Minimalist design
+* Footer with Github Logo
+* Google Analytics
+
+Bug fixes:
+* Pipeline names with "Berlin," are better handled now
+
+Technicall improvements:
+* Lots of tests
+* Experimenting with Subscriptions
+
 ## v0.1.0 - Welcome Data
 
 The game is still raw, but it has some interesting features.
