@@ -102,14 +102,11 @@ html, body{
   padding: 15px;
 }
 
-#body .status .answer {
-}
+#body .status .answer {}
 
-#body .status .time {
-}
+#body .status .time {}
 
-#body .status .score {
-}
+#body .status .score {}
 
 
 #body .status .answer.correct {
@@ -122,5 +119,20 @@ html, body{
 
 #body .status .time {
   padding: 2px;
+}
+
+#footer {
+  margin: -100px;
+}
+#footer .logo {
+  color: #bbb9b4;
+  font-family: "Sys 1.1";
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#footer p {
+  color: #bbb9b4;
 }
 

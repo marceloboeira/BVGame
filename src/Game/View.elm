@@ -3,8 +3,8 @@ module Game.View exposing (view)
 import BVG.Line as Line exposing (Line)
 import BVG.Station as Station exposing (Station)
 import Game.State as State exposing (Action, State)
-import Html exposing (Html, br, button, div, h1, h2, p, text)
-import Html.Attributes exposing (class, id, style, title)
+import Html exposing (Html, a, br, button, div, h1, h2, h3, p, text)
+import Html.Attributes exposing (class, href, id, style, target, title)
 import Html.Events exposing (onClick)
 import List exposing (map)
 
@@ -86,6 +86,22 @@ viewFinished score =
         ]
 
 
+viewFooter : Html Action
+viewFooter =
+    div [ id "footer" ]
+        [ h3 [ class "logo" ] [ text "BVGame" ]
+        , div [ id "navbar" ]
+            [ p []
+                [ text "made with 💛 by "
+                , a [ href "https://github.com/marceloboeira", target "_blank" ] [ text "marceloboeira" ]
+                ]
+            , p []
+                [ a [ href "https://github.com/marceloboeira/BVGame", target "_blank" ] [ text "source code" ]
+                ]
+            ]
+        ]
+
+
 viewBody : State -> Html Action
 viewBody state =
     div [ id "body" ]
@@ -112,4 +128,7 @@ viewBody state =
 
 view : State -> Html Action
 view state =
-    div [ id "application" ] [ viewBody state ]
+    div [ id "application" ]
+        [ viewBody state
+        , viewFooter
+        ]
