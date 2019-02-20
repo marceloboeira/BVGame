@@ -3,7 +3,7 @@
   <h3 align="center">BVGame</h3>
   <p align="center">💛 An unofficial BVG Stations Game<p>
   <p align="center">
-    <a href="https://travis-ci.org/marceloboeira/BVGame"><img src="https://img.shields.io/travis/marceloboeira/BVGame.svg?maxAge=360"></a>
+    <a href="https://travis-ci.org/marceloboeira/BVGame"><img src="https://img.shields.io/travis/marceloboeira/BVGame/master.svg?maxAge=360"></a>
     <a href="http://github.com/marceloboeira/BVGame/releases"><img src="https://img.shields.io/github/release/marceloboeira/BVGame.svg?maxAge=360"></a>
     <a href="https://marceloboeira.com/BVGame"><img src="https://img.shields.io/badge/access-BVGame-f0d722.svg?maxAge=360"></a>
   </p>
