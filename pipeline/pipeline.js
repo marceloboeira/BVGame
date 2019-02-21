@@ -55,7 +55,7 @@ const colorFor = (line) => {
  * S+U Rathaus Steglitz (Bhf) [U9] | Rathaus Steglitz
  * Berlin, Foo Bar                 | Foo Bar
  */
-const cleanStationName = (name) => name.replace(/((S\+U)|(Berlin,)|(U\s)|(\(.*?\))|(\[?U[0-9]*\]?))/g, "").trim()
+const cleanStationName = (name) => name.replace(/((S\+U)|(Berlin,)|(U\s)|(\(.*?\))|(\[U[0-9]*\]))/g, "").trim()
 
 const mergeStation = (stations, station, lines) => {
   const stationName = cleanStationName(station["name"])
