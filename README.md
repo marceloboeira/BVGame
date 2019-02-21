@@ -43,7 +43,21 @@ The output of the pipeline is copied to `dist/data/` as JSON files, consumed by 
 # Contributing
 > Help us to improve the codebase
 
-## Development
+Found a bug? Have a suggestion? Please [open an issue](https://github.com/marceloboeira/BVGame/issues/new).
+
+Want to contribute with code?
+
+## Developers
+
+1. Star the project. ⭐️
+2. Open or find an issue [here](https://github.com/marceloboeira/BVGame/issues)
+3. Fork it (https://github.com/marceloboeira/BVGame/fork)
+4. Create your feature branch (git checkout -b feature/awesome-parrot)
+5. Commit your changes
+6. Push to the branch (git push origin feature/awesome-parrot)
+7. Create a new Pull Request
+
+## Build & Run
 > Available commands
 
 * `make run` - Run the webserver at `http://localhost:1928`.
