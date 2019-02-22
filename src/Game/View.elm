@@ -20,9 +20,18 @@ viewLine station line =
         [ text line.name ]
 
 
+pluralizedScore : Int -> String
+pluralizedScore i =
+    if i == 1 then
+        "point"
+
+    else
+        "points"
+
+
 viewScore : Int -> Html Action
 viewScore s =
-    div [ class "score" ] [ text (String.fromInt s), text " points" ]
+    div [ class "score" ] [ text (String.fromInt s), text " ", text (pluralizedScore s) ]
 
 
 viewTimeLeft : Int -> Html Action
