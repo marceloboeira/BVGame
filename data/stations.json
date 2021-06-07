@@ -1,0 +1,2758 @@
+[
+  {
+    "id": "a8f1ee804649d92d81c5b496962e12fb",
+    "name": "Zoologischer Garten Bhf",
+    "lines": [
+      {
+        "id": "463d334d33927c0c4fc8fb8859a5996c",
+        "name": "U2",
+        "color": {
+          "background": "#ff3300",
+          "font": "#fff"
+        }
+      },
+      {
+        "id": "32403d148757812cbaba299d2eec0192",
+        "name": "U3",
+        "color": {
+          "background": "#00ff66",
+          "font": "#fff"
+        }
+      },
+      {
+        "id": "e746c0d3d3519f7be6bc0a34f215cf07",
+        "name": "U9",
+        "color": {
+          "background": "#ff7300",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "72da326e1fa6d6b797b648ed21b8a981",
+    "name": "Birkenstr.",
+    "lines": [
+      {
+        "id": "e746c0d3d3519f7be6bc0a34f215cf07",
+        "name": "U9",
+        "color": {
+          "background": "#ff7300",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "0cddb1fde7daa0cc1e39451b66d2430d",
+    "name": "Hansaplatz",
+    "lines": [
+      {
+        "id": "e746c0d3d3519f7be6bc0a34f215cf07",
+        "name": "U9",
+        "color": {
+          "background": "#ff7300",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "91998f89ceca3eb6fb188862d32954d1",
+    "name": "Turmstr.",
+    "lines": [
+      {
+        "id": "e746c0d3d3519f7be6bc0a34f215cf07",
+        "name": "U9",
+        "color": {
+          "background": "#ff7300",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "c74ef4a4b5361abfd67cacdf78cca4a2",
+    "name": "Berlin Hauptbahnhof",
+    "lines": [
+      {
+        "id": "b0a7fa79fc958dd6268e0f15119924e8",
+        "name": "U55",
+        "color": {
+          "background": "#664019",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "a65e2a465d44c873a33b447219cb922d",
+    "name": "Kurfürstenstr.",
+    "lines": [
+      {
+        "id": "32403d148757812cbaba299d2eec0192",
+        "name": "U3",
+        "color": {
+          "background": "#00ff66",
+          "font": "#fff"
+        }
+      },
+      {
+        "id": "53d568ec85bd7cb4e1b259aabaa58793",
+        "name": "U1",
+        "color": {
+          "background": "#59ff00",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "c07e968f8bcc897dc2ad5045cadf7dd0",
+    "name": "Mendelssohn-Bartholdy-Park",
+    "lines": [
+      {
+        "id": "463d334d33927c0c4fc8fb8859a5996c",
+        "name": "U2",
+        "color": {
+          "background": "#ff3300",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "093b9d50621815e27f9373568c904a9c",
+    "name": "Gesundbrunnen Bhf",
+    "lines": [
+      {
+        "id": "4a523ec59395ee1756ccce93d08e424b",
+        "name": "U8",
+        "color": {
+          "background": "#0061da",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "a7ad9d2578397b0670d2f8f7d1321925",
+    "name": "Voltastr.",
+    "lines": [
+      {
+        "id": "4a523ec59395ee1756ccce93d08e424b",
+        "name": "U8",
+        "color": {
+          "background": "#0061da",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ec3cfbba831821b58246c43587206d90",
+    "name": "Bernauer Str.",
+    "lines": [
+      {
+        "id": "4a523ec59395ee1756ccce93d08e424b",
+        "name": "U8",
+        "color": {
+          "background": "#0061da",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "cd44154883aac90a4a2776bdbaac1929",
+    "name": "Reinickendorfer Str.",
+    "lines": [
+      {
+        "id": "1b9d52ca030c8dde49e246687a246b24",
+        "name": "U6",
+        "color": {
+          "background": "#4d66ff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "21a4bbef36b59754f1d2574c92bc06fd",
+    "name": "Amrumer Str.",
+    "lines": [
+      {
+        "id": "e746c0d3d3519f7be6bc0a34f215cf07",
+        "name": "U9",
+        "color": {
+          "background": "#ff7300",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "44190aaec29fcd0f5dd2d1e4a3790ab0",
+    "name": "Leopoldplatz",
+    "lines": [
+      {
+        "id": "1b9d52ca030c8dde49e246687a246b24",
+        "name": "U6",
+        "color": {
+          "background": "#4d66ff",
+          "font": "#fff"
+        }
+      },
+      {
+        "id": "e746c0d3d3519f7be6bc0a34f215cf07",
+        "name": "U9",
+        "color": {
+          "background": "#ff7300",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "29d36d6e6276705ba8af10a48d8f5ead",
+    "name": "Seestr.",
+    "lines": [
+      {
+        "id": "1b9d52ca030c8dde49e246687a246b24",
+        "name": "U6",
+        "color": {
+          "background": "#4d66ff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "fa89e598c2b27f8d90fac1712c48d4cb",
+    "name": "Wedding",
+    "lines": [
+      {
+        "id": "1b9d52ca030c8dde49e246687a246b24",
+        "name": "U6",
+        "color": {
+          "background": "#4d66ff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "9ae7fbf1dea0b2a2e7518df0b3e87420",
+    "name": "Nauener Platz",
+    "lines": [
+      {
+        "id": "e746c0d3d3519f7be6bc0a34f215cf07",
+        "name": "U9",
+        "color": {
+          "background": "#ff7300",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "03169cca951232359834fca99d011326",
+    "name": "Osloer Str.",
+    "lines": [
+      {
+        "id": "4a523ec59395ee1756ccce93d08e424b",
+        "name": "U8",
+        "color": {
+          "background": "#0061da",
+          "font": "#fff"
+        }
+      },
+      {
+        "id": "e746c0d3d3519f7be6bc0a34f215cf07",
+        "name": "U9",
+        "color": {
+          "background": "#ff7300",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "bcb4ae3c290c8e548389194490bf9de7",
+    "name": "Pankstr.",
+    "lines": [
+      {
+        "id": "4a523ec59395ee1756ccce93d08e424b",
+        "name": "U8",
+        "color": {
+          "background": "#0061da",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "384809e5196247037131c18bc74f7f26",
+    "name": "Rehberge",
+    "lines": [
+      {
+        "id": "1b9d52ca030c8dde49e246687a246b24",
+        "name": "U6",
+        "color": {
+          "background": "#4d66ff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "1a5f6a520cc230c102e1cef60d52aebb",
+    "name": "Afrikanische Str.",
+    "lines": [
+      {
+        "id": "1b9d52ca030c8dde49e246687a246b24",
+        "name": "U6",
+        "color": {
+          "background": "#4d66ff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "f25bc9e1fe4f4c605500ba7fe536d8d0",
+    "name": "Kochstr./Checkpoint Charlie",
+    "lines": [
+      {
+        "id": "1b9d52ca030c8dde49e246687a246b24",
+        "name": "U6",
+        "color": {
+          "background": "#4d66ff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "b016d638bd8fc9439560b486f715e5ab",
+    "name": "Hallesches Tor",
+    "lines": [
+      {
+        "id": "1b9d52ca030c8dde49e246687a246b24",
+        "name": "U6",
+        "color": {
+          "background": "#4d66ff",
+          "font": "#fff"
+        }
+      },
+      {
+        "id": "32403d148757812cbaba299d2eec0192",
+        "name": "U3",
+        "color": {
+          "background": "#00ff66",
+          "font": "#fff"
+        }
+      },
+      {
+        "id": "53d568ec85bd7cb4e1b259aabaa58793",
+        "name": "U1",
+        "color": {
+          "background": "#59ff00",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "a9204c21725d0208b1b9d846ae453e50",
+    "name": "Moritzplatz",
+    "lines": [
+      {
+        "id": "4a523ec59395ee1756ccce93d08e424b",
+        "name": "U8",
+        "color": {
+          "background": "#0061da",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "64d81787dedaad7a734e7aa771edc2d0",
+    "name": "Kottbusser Tor",
+    "lines": [
+      {
+        "id": "32403d148757812cbaba299d2eec0192",
+        "name": "U3",
+        "color": {
+          "background": "#00ff66",
+          "font": "#fff"
+        }
+      },
+      {
+        "id": "4a523ec59395ee1756ccce93d08e424b",
+        "name": "U8",
+        "color": {
+          "background": "#0061da",
+          "font": "#fff"
+        }
+      },
+      {
+        "id": "53d568ec85bd7cb4e1b259aabaa58793",
+        "name": "U1",
+        "color": {
+          "background": "#59ff00",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "e4fc389c438f62a42824cab3f1153ddd",
+    "name": "Prinzenstr.",
+    "lines": [
+      {
+        "id": "32403d148757812cbaba299d2eec0192",
+        "name": "U3",
+        "color": {
+          "background": "#00ff66",
+          "font": "#fff"
+        }
+      },
+      {
+        "id": "53d568ec85bd7cb4e1b259aabaa58793",
+        "name": "U1",
+        "color": {
+          "background": "#59ff00",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "c783fbcf1ca3108f3392dfe06bb4bf91",
+    "name": "Görlitzer Bahnhof",
+    "lines": [
+      {
+        "id": "32403d148757812cbaba299d2eec0192",
+        "name": "U3",
+        "color": {
+          "background": "#00ff66",
+          "font": "#fff"
+        }
+      },
+      {
+        "id": "53d568ec85bd7cb4e1b259aabaa58793",
+        "name": "U1",
+        "color": {
+          "background": "#59ff00",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "1beddbdc73a74b0e31ffecf2af6ec440",
+    "name": "Schlesisches Tor",
+    "lines": [
+      {
+        "id": "32403d148757812cbaba299d2eec0192",
+        "name": "U3",
+        "color": {
+          "background": "#00ff66",
+          "font": "#fff"
+        }
+      },
+      {
+        "id": "53d568ec85bd7cb4e1b259aabaa58793",
+        "name": "U1",
+        "color": {
+          "background": "#59ff00",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "fcb470d0718b37c40fb3ff16857b1e59",
+    "name": "Gneisenaustr.",
+    "lines": [
+      {
+        "id": "7cf3c07b967000e6eeeff19d4d78fea0",
+        "name": "U7",
+        "color": {
+          "background": "#33ccff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "96b805c9c6964f91feae2108c006fb65",
+    "name": "Schönleinstr.",
+    "lines": [
+      {
+        "id": "4a523ec59395ee1756ccce93d08e424b",
+        "name": "U8",
+        "color": {
+          "background": "#0061da",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "996f08ac2c85452ae24a76a16825b5ff",
+    "name": "Südstern",
+    "lines": [
+      {
+        "id": "7cf3c07b967000e6eeeff19d4d78fea0",
+        "name": "U7",
+        "color": {
+          "background": "#33ccff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "22b90edf3a590dabb42752862cc6c584",
+    "name": "Mehringdamm",
+    "lines": [
+      {
+        "id": "7cf3c07b967000e6eeeff19d4d78fea0",
+        "name": "U7",
+        "color": {
+          "background": "#33ccff",
+          "font": "#fff"
+        }
+      },
+      {
+        "id": "1b9d52ca030c8dde49e246687a246b24",
+        "name": "U6",
+        "color": {
+          "background": "#4d66ff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "bf41ba539a0e45e0c2a108fe4de88f69",
+    "name": "Platz der Luftbrücke",
+    "lines": [
+      {
+        "id": "1b9d52ca030c8dde49e246687a246b24",
+        "name": "U6",
+        "color": {
+          "background": "#4d66ff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ffcc91530a2e543fe7feed00cac0655f",
+    "name": "Gleisdreieck",
+    "lines": [
+      {
+        "id": "463d334d33927c0c4fc8fb8859a5996c",
+        "name": "U2",
+        "color": {
+          "background": "#ff3300",
+          "font": "#fff"
+        }
+      },
+      {
+        "id": "32403d148757812cbaba299d2eec0192",
+        "name": "U3",
+        "color": {
+          "background": "#00ff66",
+          "font": "#fff"
+        }
+      },
+      {
+        "id": "53d568ec85bd7cb4e1b259aabaa58793",
+        "name": "U1",
+        "color": {
+          "background": "#59ff00",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "5a09c64d494f5f51f4c2e552f1b2424f",
+    "name": "Möckernbrücke",
+    "lines": [
+      {
+        "id": "7cf3c07b967000e6eeeff19d4d78fea0",
+        "name": "U7",
+        "color": {
+          "background": "#33ccff",
+          "font": "#fff"
+        }
+      },
+      {
+        "id": "32403d148757812cbaba299d2eec0192",
+        "name": "U3",
+        "color": {
+          "background": "#00ff66",
+          "font": "#fff"
+        }
+      },
+      {
+        "id": "53d568ec85bd7cb4e1b259aabaa58793",
+        "name": "U1",
+        "color": {
+          "background": "#59ff00",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "2e615ff8d2b2a9f222b561aaab2359f9",
+    "name": "Jakob-Kaiser-Platz",
+    "lines": [
+      {
+        "id": "7cf3c07b967000e6eeeff19d4d78fea0",
+        "name": "U7",
+        "color": {
+          "background": "#33ccff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "b41788d31c9446587ca1d95354e5d299",
+    "name": "Halemweg",
+    "lines": [
+      {
+        "id": "7cf3c07b967000e6eeeff19d4d78fea0",
+        "name": "U7",
+        "color": {
+          "background": "#33ccff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "f759f6891ff562ac57b08fec6149144d",
+    "name": "Mierendorffplatz",
+    "lines": [
+      {
+        "id": "7cf3c07b967000e6eeeff19d4d78fea0",
+        "name": "U7",
+        "color": {
+          "background": "#33ccff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "7a4d14ef280ef35a1d2e72037d089218",
+    "name": "Jungfernheide Bhf",
+    "lines": [
+      {
+        "id": "7cf3c07b967000e6eeeff19d4d78fea0",
+        "name": "U7",
+        "color": {
+          "background": "#33ccff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "e4677e48256def60967a39ae98770ab6",
+    "name": "Sophie-Charlotte-Platz",
+    "lines": [
+      {
+        "id": "463d334d33927c0c4fc8fb8859a5996c",
+        "name": "U2",
+        "color": {
+          "background": "#ff3300",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "d186751b7288dd590261a9d91d47520b",
+    "name": "Deutsche Oper",
+    "lines": [
+      {
+        "id": "463d334d33927c0c4fc8fb8859a5996c",
+        "name": "U2",
+        "color": {
+          "background": "#ff3300",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "d104acde5e402d0255c3a9718cd4653b",
+    "name": "Richard-Wagner-Platz",
+    "lines": [
+      {
+        "id": "7cf3c07b967000e6eeeff19d4d78fea0",
+        "name": "U7",
+        "color": {
+          "background": "#33ccff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "2cb25170a2c45e1aaed1b65a96784578",
+    "name": "Ernst-Reuter-Platz",
+    "lines": [
+      {
+        "id": "463d334d33927c0c4fc8fb8859a5996c",
+        "name": "U2",
+        "color": {
+          "background": "#ff3300",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "b3afd47e605a2651c767d493aaf49c7d",
+    "name": "Augsburger Str.",
+    "lines": [
+      {
+        "id": "463d334d33927c0c4fc8fb8859a5996c",
+        "name": "U2",
+        "color": {
+          "background": "#ff3300",
+          "font": "#fff"
+        }
+      },
+      {
+        "id": "32403d148757812cbaba299d2eec0192",
+        "name": "U3",
+        "color": {
+          "background": "#00ff66",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "70e63dbfd3c995c3c42b2138b663711a",
+    "name": "Kurfürstendamm",
+    "lines": [
+      {
+        "id": "e746c0d3d3519f7be6bc0a34f215cf07",
+        "name": "U9",
+        "color": {
+          "background": "#ff7300",
+          "font": "#fff"
+        }
+      },
+      {
+        "id": "53d568ec85bd7cb4e1b259aabaa58793",
+        "name": "U1",
+        "color": {
+          "background": "#59ff00",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "17206409ca8c7fcee78142365909385e",
+    "name": "Uhlandstr.",
+    "lines": [
+      {
+        "id": "53d568ec85bd7cb4e1b259aabaa58793",
+        "name": "U1",
+        "color": {
+          "background": "#59ff00",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "6c172c99644c618a633920c21e2caed9",
+    "name": "Adenauerplatz",
+    "lines": [
+      {
+        "id": "7cf3c07b967000e6eeeff19d4d78fea0",
+        "name": "U7",
+        "color": {
+          "background": "#33ccff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "d8a7cbb49108f1673bca56c29cf05896",
+    "name": "Bismarckstr.",
+    "lines": [
+      {
+        "id": "7cf3c07b967000e6eeeff19d4d78fea0",
+        "name": "U7",
+        "color": {
+          "background": "#33ccff",
+          "font": "#fff"
+        }
+      },
+      {
+        "id": "463d334d33927c0c4fc8fb8859a5996c",
+        "name": "U2",
+        "color": {
+          "background": "#ff3300",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "555752115e74f6d8fea4a9c4a4d3ddb7",
+    "name": "Wilmersdorfer Str.",
+    "lines": [
+      {
+        "id": "7cf3c07b967000e6eeeff19d4d78fea0",
+        "name": "U7",
+        "color": {
+          "background": "#33ccff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "a23bff653eef6d53ff55a2b433455898",
+    "name": "Ruhleben",
+    "lines": [
+      {
+        "id": "463d334d33927c0c4fc8fb8859a5996c",
+        "name": "U2",
+        "color": {
+          "background": "#ff3300",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "5abc81e75bc4c4fcd99654e272597dfd",
+    "name": "Olympia-Stadion",
+    "lines": [
+      {
+        "id": "463d334d33927c0c4fc8fb8859a5996c",
+        "name": "U2",
+        "color": {
+          "background": "#ff3300",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "4168959302ab176c4fbcf71530d18005",
+    "name": "Neu-Westend",
+    "lines": [
+      {
+        "id": "463d334d33927c0c4fc8fb8859a5996c",
+        "name": "U2",
+        "color": {
+          "background": "#ff3300",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "7d4f5abab3176a8b0924db97019a488e",
+    "name": "Theodor-Heuss-Platz",
+    "lines": [
+      {
+        "id": "463d334d33927c0c4fc8fb8859a5996c",
+        "name": "U2",
+        "color": {
+          "background": "#ff3300",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "c2557030eafaf8ef25c4c57b8158791d",
+    "name": "Kaiserdamm",
+    "lines": [
+      {
+        "id": "463d334d33927c0c4fc8fb8859a5996c",
+        "name": "U2",
+        "color": {
+          "background": "#ff3300",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "0fb7cd4e3f1737ef453884714f59a97d",
+    "name": "Altstadt Spandau",
+    "lines": [
+      {
+        "id": "7cf3c07b967000e6eeeff19d4d78fea0",
+        "name": "U7",
+        "color": {
+          "background": "#33ccff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "10d296166ff1c63b5bbf1ddea8e5efba",
+    "name": "Rathaus Spandau",
+    "lines": [
+      {
+        "id": "7cf3c07b967000e6eeeff19d4d78fea0",
+        "name": "U7",
+        "color": {
+          "background": "#33ccff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "59dfa89043630d4acf49773ab117e6f1",
+    "name": "Zitadelle",
+    "lines": [
+      {
+        "id": "7cf3c07b967000e6eeeff19d4d78fea0",
+        "name": "U7",
+        "color": {
+          "background": "#33ccff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "d6d8de9c2dfbfeca8c9a447fba5db9bd",
+    "name": "Paulsternstr.",
+    "lines": [
+      {
+        "id": "7cf3c07b967000e6eeeff19d4d78fea0",
+        "name": "U7",
+        "color": {
+          "background": "#33ccff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "47c2313b4be310bb992d604095eb1158",
+    "name": "Haselhorst",
+    "lines": [
+      {
+        "id": "7cf3c07b967000e6eeeff19d4d78fea0",
+        "name": "U7",
+        "color": {
+          "background": "#33ccff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "d5895aac76c13296fa32485ee245e93e",
+    "name": "Siemensdamm",
+    "lines": [
+      {
+        "id": "7cf3c07b967000e6eeeff19d4d78fea0",
+        "name": "U7",
+        "color": {
+          "background": "#33ccff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "dc76eccfb441687067081f41c39bf43a",
+    "name": "Rohrdamm",
+    "lines": [
+      {
+        "id": "7cf3c07b967000e6eeeff19d4d78fea0",
+        "name": "U7",
+        "color": {
+          "background": "#33ccff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "c15b37dfee701d5e6faf68c96268d014",
+    "name": "Fehrbelliner Platz",
+    "lines": [
+      {
+        "id": "7cf3c07b967000e6eeeff19d4d78fea0",
+        "name": "U7",
+        "color": {
+          "background": "#33ccff",
+          "font": "#fff"
+        }
+      },
+      {
+        "id": "463d334d33927c0c4fc8fb8859a5996c",
+        "name": "U2",
+        "color": {
+          "background": "#ff3300",
+          "font": "#fff"
+        }
+      },
+      {
+        "id": "32403d148757812cbaba299d2eec0192",
+        "name": "U3",
+        "color": {
+          "background": "#00ff66",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "a0c70baa3fd7f36ef2c9f51353e92691",
+    "name": "Blissestr.",
+    "lines": [
+      {
+        "id": "7cf3c07b967000e6eeeff19d4d78fea0",
+        "name": "U7",
+        "color": {
+          "background": "#33ccff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "3adbbe58a7852f629a2aa2e52f5c9cdd",
+    "name": "Konstanzer Str.",
+    "lines": [
+      {
+        "id": "7cf3c07b967000e6eeeff19d4d78fea0",
+        "name": "U7",
+        "color": {
+          "background": "#33ccff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "74401f2e94c8e55edd8b558fff4f2f67",
+    "name": "Spichernstr.",
+    "lines": [
+      {
+        "id": "463d334d33927c0c4fc8fb8859a5996c",
+        "name": "U2",
+        "color": {
+          "background": "#ff3300",
+          "font": "#fff"
+        }
+      },
+      {
+        "id": "32403d148757812cbaba299d2eec0192",
+        "name": "U3",
+        "color": {
+          "background": "#00ff66",
+          "font": "#fff"
+        }
+      },
+      {
+        "id": "e746c0d3d3519f7be6bc0a34f215cf07",
+        "name": "U9",
+        "color": {
+          "background": "#ff7300",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "d43e06563517eecd795009e65c36f22a",
+    "name": "Hohenzollernplatz",
+    "lines": [
+      {
+        "id": "463d334d33927c0c4fc8fb8859a5996c",
+        "name": "U2",
+        "color": {
+          "background": "#ff3300",
+          "font": "#fff"
+        }
+      },
+      {
+        "id": "32403d148757812cbaba299d2eec0192",
+        "name": "U3",
+        "color": {
+          "background": "#00ff66",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "80a254027bf446a21f494a9420df407d",
+    "name": "Güntzelstr.",
+    "lines": [
+      {
+        "id": "e746c0d3d3519f7be6bc0a34f215cf07",
+        "name": "U9",
+        "color": {
+          "background": "#ff7300",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "0896b93653d164d15573fc1d8f123ec2",
+    "name": "Berliner Str.",
+    "lines": [
+      {
+        "id": "7cf3c07b967000e6eeeff19d4d78fea0",
+        "name": "U7",
+        "color": {
+          "background": "#33ccff",
+          "font": "#fff"
+        }
+      },
+      {
+        "id": "e746c0d3d3519f7be6bc0a34f215cf07",
+        "name": "U9",
+        "color": {
+          "background": "#ff7300",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "569ac27663b79b665bf2925dbf230bcf",
+    "name": "Bundesplatz",
+    "lines": [
+      {
+        "id": "e746c0d3d3519f7be6bc0a34f215cf07",
+        "name": "U9",
+        "color": {
+          "background": "#ff7300",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "a9de9b1c0973386c6013c5a04361522d",
+    "name": "Rüdesheimer Platz",
+    "lines": [
+      {
+        "id": "463d334d33927c0c4fc8fb8859a5996c",
+        "name": "U2",
+        "color": {
+          "background": "#ff3300",
+          "font": "#fff"
+        }
+      },
+      {
+        "id": "32403d148757812cbaba299d2eec0192",
+        "name": "U3",
+        "color": {
+          "background": "#00ff66",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "d0e745d49863e348e479de1a43c3095e",
+    "name": "Heidelberger Platz",
+    "lines": [
+      {
+        "id": "463d334d33927c0c4fc8fb8859a5996c",
+        "name": "U2",
+        "color": {
+          "background": "#ff3300",
+          "font": "#fff"
+        }
+      },
+      {
+        "id": "32403d148757812cbaba299d2eec0192",
+        "name": "U3",
+        "color": {
+          "background": "#00ff66",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "243223b835be240c8c1094c19623d620",
+    "name": "Onkel Toms Hütte",
+    "lines": [
+      {
+        "id": "32403d148757812cbaba299d2eec0192",
+        "name": "U3",
+        "color": {
+          "background": "#00ff66",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "62e7ac97d0b17d302aa6f63471f1cef4",
+    "name": "Freie Universität",
+    "lines": [
+      {
+        "id": "32403d148757812cbaba299d2eec0192",
+        "name": "U3",
+        "color": {
+          "background": "#00ff66",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "df904c7172c82b5860520ecc1935b813",
+    "name": "Breitenbachplatz",
+    "lines": [
+      {
+        "id": "463d334d33927c0c4fc8fb8859a5996c",
+        "name": "U2",
+        "color": {
+          "background": "#ff3300",
+          "font": "#fff"
+        }
+      },
+      {
+        "id": "32403d148757812cbaba299d2eec0192",
+        "name": "U3",
+        "color": {
+          "background": "#00ff66",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "87c398ea333d36758ab618890da3e4e4",
+    "name": "Oskar-Helene-Heim",
+    "lines": [
+      {
+        "id": "32403d148757812cbaba299d2eec0192",
+        "name": "U3",
+        "color": {
+          "background": "#00ff66",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "e8f6803b2aae71633119200bc99161e7",
+    "name": "Podbielskiallee",
+    "lines": [
+      {
+        "id": "32403d148757812cbaba299d2eec0192",
+        "name": "U3",
+        "color": {
+          "background": "#00ff66",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "c5b7a57f9e11b6f90d1e113cd86ae041",
+    "name": "Dahlem-Dorf",
+    "lines": [
+      {
+        "id": "32403d148757812cbaba299d2eec0192",
+        "name": "U3",
+        "color": {
+          "background": "#00ff66",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "109af424a7f321bc630a721507f7eebd",
+    "name": "Rathaus Schöneberg",
+    "lines": [
+      {
+        "id": "6d769c280b5dad8604564f31ff3c1355",
+        "name": "U4",
+        "color": {
+          "background": "#ffe600",
+          "font": "#000"
+        }
+      }
+    ]
+  },
+  {
+    "id": "f742aa0e8f9d5ecba8d45e066382d61d",
+    "name": "Kleistpark",
+    "lines": [
+      {
+        "id": "7cf3c07b967000e6eeeff19d4d78fea0",
+        "name": "U7",
+        "color": {
+          "background": "#33ccff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "00bc8e7ed520f3ce666da140e82d5d69",
+    "name": "Eisenacher Str.",
+    "lines": [
+      {
+        "id": "7cf3c07b967000e6eeeff19d4d78fea0",
+        "name": "U7",
+        "color": {
+          "background": "#33ccff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "2ba3dd8c22459c87cdd5939599c51e42",
+    "name": "Innsbrucker Platz",
+    "lines": [
+      {
+        "id": "6d769c280b5dad8604564f31ff3c1355",
+        "name": "U4",
+        "color": {
+          "background": "#ffe600",
+          "font": "#000"
+        }
+      }
+    ]
+  },
+  {
+    "id": "b2739f695781ec34811b1e716fdb6b4e",
+    "name": "Viktoria-Luise-Platz",
+    "lines": [
+      {
+        "id": "6d769c280b5dad8604564f31ff3c1355",
+        "name": "U4",
+        "color": {
+          "background": "#ffe600",
+          "font": "#000"
+        }
+      }
+    ]
+  },
+  {
+    "id": "c81dfc2f36f546ae8b967aaa4a863e95",
+    "name": "Bayerischer Platz",
+    "lines": [
+      {
+        "id": "7cf3c07b967000e6eeeff19d4d78fea0",
+        "name": "U7",
+        "color": {
+          "background": "#33ccff",
+          "font": "#fff"
+        }
+      },
+      {
+        "id": "6d769c280b5dad8604564f31ff3c1355",
+        "name": "U4",
+        "color": {
+          "background": "#ffe600",
+          "font": "#000"
+        }
+      }
+    ]
+  },
+  {
+    "id": "30f5d6ee65dece1f3a0fe62bca58b48f",
+    "name": "Wittenbergplatz",
+    "lines": [
+      {
+        "id": "463d334d33927c0c4fc8fb8859a5996c",
+        "name": "U2",
+        "color": {
+          "background": "#ff3300",
+          "font": "#fff"
+        }
+      },
+      {
+        "id": "32403d148757812cbaba299d2eec0192",
+        "name": "U3",
+        "color": {
+          "background": "#00ff66",
+          "font": "#fff"
+        }
+      },
+      {
+        "id": "53d568ec85bd7cb4e1b259aabaa58793",
+        "name": "U1",
+        "color": {
+          "background": "#59ff00",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "50d685cfbcf6a98047306b415f34339b",
+    "name": "Nollendorfplatz",
+    "lines": [
+      {
+        "id": "463d334d33927c0c4fc8fb8859a5996c",
+        "name": "U2",
+        "color": {
+          "background": "#ff3300",
+          "font": "#fff"
+        }
+      },
+      {
+        "id": "32403d148757812cbaba299d2eec0192",
+        "name": "U3",
+        "color": {
+          "background": "#00ff66",
+          "font": "#fff"
+        }
+      },
+      {
+        "id": "53d568ec85bd7cb4e1b259aabaa58793",
+        "name": "U1",
+        "color": {
+          "background": "#59ff00",
+          "font": "#fff"
+        }
+      },
+      {
+        "id": "6d769c280b5dad8604564f31ff3c1355",
+        "name": "U4",
+        "color": {
+          "background": "#ffe600",
+          "font": "#000"
+        }
+      }
+    ]
+  },
+  {
+    "id": "cf56b8f8d30fdca53002317412c91e4d",
+    "name": "Bülowstr.",
+    "lines": [
+      {
+        "id": "463d334d33927c0c4fc8fb8859a5996c",
+        "name": "U2",
+        "color": {
+          "background": "#ff3300",
+          "font": "#fff"
+        }
+      },
+      {
+        "id": "32403d148757812cbaba299d2eec0192",
+        "name": "U3",
+        "color": {
+          "background": "#00ff66",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "087f19250e343d2193a7534f3591abaf",
+    "name": "Walther-Schreiber-Platz",
+    "lines": [
+      {
+        "id": "e746c0d3d3519f7be6bc0a34f215cf07",
+        "name": "U9",
+        "color": {
+          "background": "#ff7300",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "e14e329dc5e7ec4584b36fcbadc3aff3",
+    "name": "Friedrich-Wilhelm-Platz",
+    "lines": [
+      {
+        "id": "e746c0d3d3519f7be6bc0a34f215cf07",
+        "name": "U9",
+        "color": {
+          "background": "#ff7300",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "7b774b6529ca954b858c732ade9f2832",
+    "name": "Schloßstr.",
+    "lines": [
+      {
+        "id": "e746c0d3d3519f7be6bc0a34f215cf07",
+        "name": "U9",
+        "color": {
+          "background": "#ff7300",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "f48608f7c819e18bb9a0a210f729be6b",
+    "name": "Paradestr.",
+    "lines": [
+      {
+        "id": "1b9d52ca030c8dde49e246687a246b24",
+        "name": "U6",
+        "color": {
+          "background": "#4d66ff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "0e0ce9505edff015e4d7237d6fafccc2",
+    "name": "Tempelhof",
+    "lines": [
+      {
+        "id": "1b9d52ca030c8dde49e246687a246b24",
+        "name": "U6",
+        "color": {
+          "background": "#4d66ff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "3335f24c795536f316373f9c186441e8",
+    "name": "Alt-Tempelhof",
+    "lines": [
+      {
+        "id": "1b9d52ca030c8dde49e246687a246b24",
+        "name": "U6",
+        "color": {
+          "background": "#4d66ff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ec3d4469a59b9bb6927cdfe3b16f116f",
+    "name": "Kaiserin-Augusta-Str.",
+    "lines": [
+      {
+        "id": "1b9d52ca030c8dde49e246687a246b24",
+        "name": "U6",
+        "color": {
+          "background": "#4d66ff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "704c5632d4000366544bb3c7024f671a",
+    "name": "Ullsteinstr.",
+    "lines": [
+      {
+        "id": "1b9d52ca030c8dde49e246687a246b24",
+        "name": "U6",
+        "color": {
+          "background": "#4d66ff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "6b6272a61c0cfbcbb1ff08ac33dd19df",
+    "name": "Westphalweg",
+    "lines": [
+      {
+        "id": "1b9d52ca030c8dde49e246687a246b24",
+        "name": "U6",
+        "color": {
+          "background": "#4d66ff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "3c6bfd078c0bedc769c4bef16b35be1b",
+    "name": "Alt-Mariendorf",
+    "lines": [
+      {
+        "id": "1b9d52ca030c8dde49e246687a246b24",
+        "name": "U6",
+        "color": {
+          "background": "#4d66ff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "25d6d4bf2896459f559f79b939a5925f",
+    "name": "Hermannplatz",
+    "lines": [
+      {
+        "id": "7cf3c07b967000e6eeeff19d4d78fea0",
+        "name": "U7",
+        "color": {
+          "background": "#33ccff",
+          "font": "#fff"
+        }
+      },
+      {
+        "id": "4a523ec59395ee1756ccce93d08e424b",
+        "name": "U8",
+        "color": {
+          "background": "#0061da",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ea13387a895da6e95eb90966cac2e477",
+    "name": "Rathaus Neukölln",
+    "lines": [
+      {
+        "id": "7cf3c07b967000e6eeeff19d4d78fea0",
+        "name": "U7",
+        "color": {
+          "background": "#33ccff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "b6b083a111e80e8799c46c09f815b827",
+    "name": "Karl-Marx-Str.",
+    "lines": [
+      {
+        "id": "7cf3c07b967000e6eeeff19d4d78fea0",
+        "name": "U7",
+        "color": {
+          "background": "#33ccff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "82c463512e4ed6976cf1ea59dee6d10f",
+    "name": "Leinestr.",
+    "lines": [
+      {
+        "id": "4a523ec59395ee1756ccce93d08e424b",
+        "name": "U8",
+        "color": {
+          "background": "#0061da",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "f81cfd362f10cbd942a7769bf34539bf",
+    "name": "Boddinstr.",
+    "lines": [
+      {
+        "id": "4a523ec59395ee1756ccce93d08e424b",
+        "name": "U8",
+        "color": {
+          "background": "#0061da",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "eaa282ae6719a3f0359b6126f2b2da66",
+    "name": "Hermannstr.",
+    "lines": [
+      {
+        "id": "4a523ec59395ee1756ccce93d08e424b",
+        "name": "U8",
+        "color": {
+          "background": "#0061da",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "789a3c4a13ada1d85d10f48dfb3b1ec1",
+    "name": "Blaschkoallee",
+    "lines": [
+      {
+        "id": "7cf3c07b967000e6eeeff19d4d78fea0",
+        "name": "U7",
+        "color": {
+          "background": "#33ccff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "9781202254e7d7dff73d5a3d1e0e0948",
+    "name": "Grenzallee",
+    "lines": [
+      {
+        "id": "7cf3c07b967000e6eeeff19d4d78fea0",
+        "name": "U7",
+        "color": {
+          "background": "#33ccff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "1543d2bf6be615bccd5bdf4b39d9d45f",
+    "name": "Parchimer Allee",
+    "lines": [
+      {
+        "id": "7cf3c07b967000e6eeeff19d4d78fea0",
+        "name": "U7",
+        "color": {
+          "background": "#33ccff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "b75ca9ba1b180ab9466e61ed0afc8722",
+    "name": "Britz-Süd",
+    "lines": [
+      {
+        "id": "7cf3c07b967000e6eeeff19d4d78fea0",
+        "name": "U7",
+        "color": {
+          "background": "#33ccff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "c6f6585dd3cb26b575e25471e242148d",
+    "name": "Lipschitzallee",
+    "lines": [
+      {
+        "id": "7cf3c07b967000e6eeeff19d4d78fea0",
+        "name": "U7",
+        "color": {
+          "background": "#33ccff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "f64b34a733abd06a614c7e1e36a460c9",
+    "name": "Johannisthaler Chaussee",
+    "lines": [
+      {
+        "id": "7cf3c07b967000e6eeeff19d4d78fea0",
+        "name": "U7",
+        "color": {
+          "background": "#33ccff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "953795456eaebf657394d4d5298a678b",
+    "name": "Zwickauer Damm",
+    "lines": [
+      {
+        "id": "7cf3c07b967000e6eeeff19d4d78fea0",
+        "name": "U7",
+        "color": {
+          "background": "#33ccff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "fd0538ef0405dbbb63328222aab133d0",
+    "name": "Wutzkyallee",
+    "lines": [
+      {
+        "id": "7cf3c07b967000e6eeeff19d4d78fea0",
+        "name": "U7",
+        "color": {
+          "background": "#33ccff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "1576cfa15e6666c15e4745282361e888",
+    "name": "Rudow",
+    "lines": [
+      {
+        "id": "7cf3c07b967000e6eeeff19d4d78fea0",
+        "name": "U7",
+        "color": {
+          "background": "#33ccff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "331a31aca4ea4b1da9d4de864a5a7750",
+    "name": "Paracelsus-Bad",
+    "lines": [
+      {
+        "id": "4a523ec59395ee1756ccce93d08e424b",
+        "name": "U8",
+        "color": {
+          "background": "#0061da",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "7adf0478ac86f45cf882b451b8ddfeb3",
+    "name": "Franz-Neumann-Platz",
+    "lines": [
+      {
+        "id": "4a523ec59395ee1756ccce93d08e424b",
+        "name": "U8",
+        "color": {
+          "background": "#0061da",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "7790e6684a0cd2d94c4eab243ef985d9",
+    "name": "Residenzstr.",
+    "lines": [
+      {
+        "id": "4a523ec59395ee1756ccce93d08e424b",
+        "name": "U8",
+        "color": {
+          "background": "#0061da",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "50abccf5695a204e1b2eef8a5e3e7ece",
+    "name": "Otisstr.",
+    "lines": [
+      {
+        "id": "1b9d52ca030c8dde49e246687a246b24",
+        "name": "U6",
+        "color": {
+          "background": "#4d66ff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "e217c6d896f3b42a3f94bcb7dffd822c",
+    "name": "Kurt-Schumacher-Platz",
+    "lines": [
+      {
+        "id": "1b9d52ca030c8dde49e246687a246b24",
+        "name": "U6",
+        "color": {
+          "background": "#4d66ff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "c97ceb3e886dfc00b20dec5ce3b0b7df",
+    "name": "Lindauer Allee",
+    "lines": [
+      {
+        "id": "4a523ec59395ee1756ccce93d08e424b",
+        "name": "U8",
+        "color": {
+          "background": "#0061da",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ca919e62e205d53b796e73392b4398a4",
+    "name": "Scharnweberstr.",
+    "lines": [
+      {
+        "id": "1b9d52ca030c8dde49e246687a246b24",
+        "name": "U6",
+        "color": {
+          "background": "#4d66ff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "9c930f3668d3e33281c997d183c2ab99",
+    "name": "Holzhauser Str.",
+    "lines": [
+      {
+        "id": "1b9d52ca030c8dde49e246687a246b24",
+        "name": "U6",
+        "color": {
+          "background": "#4d66ff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "2bb96ffa4ed4571653bc14af23751905",
+    "name": "Borsigwerke",
+    "lines": [
+      {
+        "id": "1b9d52ca030c8dde49e246687a246b24",
+        "name": "U6",
+        "color": {
+          "background": "#4d66ff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "2760d89e99cea0a9bdffe9e8ce852ace",
+    "name": "Alt-Tegel",
+    "lines": [
+      {
+        "id": "1b9d52ca030c8dde49e246687a246b24",
+        "name": "U6",
+        "color": {
+          "background": "#4d66ff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "cd3f74c878a9dc6ae6dfa44278dfdb8e",
+    "name": "Rathaus Reinickendorf",
+    "lines": [
+      {
+        "id": "4a523ec59395ee1756ccce93d08e424b",
+        "name": "U8",
+        "color": {
+          "background": "#0061da",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "cc1a9a2ffb5d3f3d563a0d1ef64623cc",
+    "name": "Karl-Bonhoeffer-Nervenklinik",
+    "lines": [
+      {
+        "id": "4a523ec59395ee1756ccce93d08e424b",
+        "name": "U8",
+        "color": {
+          "background": "#0061da",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "80bd001a146abaf9b7b5ff3f9e779c55",
+    "name": "Friedrichstr. Bhf",
+    "lines": [
+      {
+        "id": "1b9d52ca030c8dde49e246687a246b24",
+        "name": "U6",
+        "color": {
+          "background": "#4d66ff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "b59af70b8085326baf6cbf49b62eda07",
+    "name": "Jannowitzbrücke",
+    "lines": [
+      {
+        "id": "4a523ec59395ee1756ccce93d08e424b",
+        "name": "U8",
+        "color": {
+          "background": "#0061da",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "7ddd9cca1a89576ad457b8f4fdb45d53",
+    "name": "Heinrich-Heine-Str.",
+    "lines": [
+      {
+        "id": "4a523ec59395ee1756ccce93d08e424b",
+        "name": "U8",
+        "color": {
+          "background": "#0061da",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "4a72df2db2123f78249b493bfd0c053f",
+    "name": "Naturkundemuseum",
+    "lines": [
+      {
+        "id": "1b9d52ca030c8dde49e246687a246b24",
+        "name": "U6",
+        "color": {
+          "background": "#4d66ff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "a72db1d3f2ca79552f7c637020dd182b",
+    "name": "Mohrenstr.",
+    "lines": [
+      {
+        "id": "463d334d33927c0c4fc8fb8859a5996c",
+        "name": "U2",
+        "color": {
+          "background": "#ff3300",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "fd7dc01035a49d26f55eff314de15cba",
+    "name": "Stadtmitte",
+    "lines": [
+      {
+        "id": "1b9d52ca030c8dde49e246687a246b24",
+        "name": "U6",
+        "color": {
+          "background": "#4d66ff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "181137983a078ecd7fc49fb88fe36ea5",
+    "name": "Hausvogteiplatz",
+    "lines": [
+      {
+        "id": "463d334d33927c0c4fc8fb8859a5996c",
+        "name": "U2",
+        "color": {
+          "background": "#ff3300",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "fe77053d6d8b5a7ccfbe679be9ba8988",
+    "name": "Spittelmarkt",
+    "lines": [
+      {
+        "id": "463d334d33927c0c4fc8fb8859a5996c",
+        "name": "U2",
+        "color": {
+          "background": "#ff3300",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "d81948a5bd4eb955a526ac0a5b501fda",
+    "name": "Märkisches Museum",
+    "lines": [
+      {
+        "id": "463d334d33927c0c4fc8fb8859a5996c",
+        "name": "U2",
+        "color": {
+          "background": "#ff3300",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "2b90b1656c7f5f80ce0249d2005d41bb",
+    "name": "Klosterstr.",
+    "lines": [
+      {
+        "id": "463d334d33927c0c4fc8fb8859a5996c",
+        "name": "U2",
+        "color": {
+          "background": "#ff3300",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "722d538745cb7053d9357ffbb6e76b86",
+    "name": "Rosa-Luxemburg-Platz",
+    "lines": [
+      {
+        "id": "463d334d33927c0c4fc8fb8859a5996c",
+        "name": "U2",
+        "color": {
+          "background": "#ff3300",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "39a62bb2499df9f9f858b160c688a2b3",
+    "name": "Schillingstr.",
+    "lines": [
+      {
+        "id": "d53760d23d9f4340687c94f9ed1bb000",
+        "name": "U5",
+        "color": {
+          "background": "#664019",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "d824a01c9b2fdc8be9da716a1987b3e5",
+    "name": "Oranienburger Tor",
+    "lines": [
+      {
+        "id": "1b9d52ca030c8dde49e246687a246b24",
+        "name": "U6",
+        "color": {
+          "background": "#4d66ff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "084a6fd2fc32e44bae719a2362061e60",
+    "name": "Rosenthaler Platz",
+    "lines": [
+      {
+        "id": "4a523ec59395ee1756ccce93d08e424b",
+        "name": "U8",
+        "color": {
+          "background": "#0061da",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "9614a7a6ad4a3de367514a8248079fd6",
+    "name": "Brandenburger Tor",
+    "lines": [
+      {
+        "id": "b0a7fa79fc958dd6268e0f15119924e8",
+        "name": "U55",
+        "color": {
+          "background": "#664019",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "7def3df8b7c80fa52a3209bba8a930a5",
+    "name": "Französische Str.",
+    "lines": [
+      {
+        "id": "1b9d52ca030c8dde49e246687a246b24",
+        "name": "U6",
+        "color": {
+          "background": "#4d66ff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "28afb150913101ac92a38142be41eaab",
+    "name": "Weinmeisterstr.",
+    "lines": [
+      {
+        "id": "4a523ec59395ee1756ccce93d08e424b",
+        "name": "U8",
+        "color": {
+          "background": "#0061da",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "c5e30810b784643b98f771489a9e9bd5",
+    "name": "Schwartzkopffstr.",
+    "lines": [
+      {
+        "id": "1b9d52ca030c8dde49e246687a246b24",
+        "name": "U6",
+        "color": {
+          "background": "#4d66ff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "8942c44d32104a9205d250557ef78f90",
+    "name": "Schönhauser Allee",
+    "lines": [
+      {
+        "id": "463d334d33927c0c4fc8fb8859a5996c",
+        "name": "U2",
+        "color": {
+          "background": "#ff3300",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "330cdecf8df218b360899c042c8f9f8c",
+    "name": "Senefelderplatz",
+    "lines": [
+      {
+        "id": "463d334d33927c0c4fc8fb8859a5996c",
+        "name": "U2",
+        "color": {
+          "background": "#ff3300",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "37cb1998dc2cc5f46f18e1c188a5c361",
+    "name": "Eberswalder Str.",
+    "lines": [
+      {
+        "id": "463d334d33927c0c4fc8fb8859a5996c",
+        "name": "U2",
+        "color": {
+          "background": "#ff3300",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "75c6fd8cec0c9c74e6fdf9c502bc037c",
+    "name": "Frankfurter Allee",
+    "lines": [
+      {
+        "id": "d53760d23d9f4340687c94f9ed1bb000",
+        "name": "U5",
+        "color": {
+          "background": "#664019",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "73d7755797d68e0aa303d12bc6e0f3b1",
+    "name": "Warschauer Str.",
+    "lines": [
+      {
+        "id": "32403d148757812cbaba299d2eec0192",
+        "name": "U3",
+        "color": {
+          "background": "#00ff66",
+          "font": "#fff"
+        }
+      },
+      {
+        "id": "53d568ec85bd7cb4e1b259aabaa58793",
+        "name": "U1",
+        "color": {
+          "background": "#59ff00",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "65da536e630f953dd2765cf9898c72ec",
+    "name": "Strausberger Platz",
+    "lines": [
+      {
+        "id": "d53760d23d9f4340687c94f9ed1bb000",
+        "name": "U5",
+        "color": {
+          "background": "#664019",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "316c95302aa267dfc671d40a4666a7c4",
+    "name": "Frankfurter Tor",
+    "lines": [
+      {
+        "id": "d53760d23d9f4340687c94f9ed1bb000",
+        "name": "U5",
+        "color": {
+          "background": "#664019",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "30f3c5868d2c82b3e573387d25b0eaff",
+    "name": "Samariterstr.",
+    "lines": [
+      {
+        "id": "d53760d23d9f4340687c94f9ed1bb000",
+        "name": "U5",
+        "color": {
+          "background": "#664019",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "557306c224dae5225603c96ea2fa5656",
+    "name": "Weberwiese",
+    "lines": [
+      {
+        "id": "d53760d23d9f4340687c94f9ed1bb000",
+        "name": "U5",
+        "color": {
+          "background": "#664019",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "4febe1f5edfe447c3c7e016daae5b85a",
+    "name": "Pankow",
+    "lines": [
+      {
+        "id": "463d334d33927c0c4fc8fb8859a5996c",
+        "name": "U2",
+        "color": {
+          "background": "#ff3300",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "0243f92f9b52b1a3f2c603ba80265954",
+    "name": "Vinetastr.",
+    "lines": [
+      {
+        "id": "463d334d33927c0c4fc8fb8859a5996c",
+        "name": "U2",
+        "color": {
+          "background": "#ff3300",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "43dc96e2494d64bd367c9cd29df5bc18",
+    "name": "Magdalenenstr.",
+    "lines": [
+      {
+        "id": "d53760d23d9f4340687c94f9ed1bb000",
+        "name": "U5",
+        "color": {
+          "background": "#664019",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "6b05386c532ec648b60f6a139763fa0c",
+    "name": "Tierpark",
+    "lines": [
+      {
+        "id": "d53760d23d9f4340687c94f9ed1bb000",
+        "name": "U5",
+        "color": {
+          "background": "#664019",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "e2759115f283d03127c968d028f1f3ad",
+    "name": "Friedrichsfelde",
+    "lines": [
+      {
+        "id": "d53760d23d9f4340687c94f9ed1bb000",
+        "name": "U5",
+        "color": {
+          "background": "#664019",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "811fdc859f422548b180a76194792682",
+    "name": "Biesdorf-Süd",
+    "lines": [
+      {
+        "id": "d53760d23d9f4340687c94f9ed1bb000",
+        "name": "U5",
+        "color": {
+          "background": "#664019",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "59bdd61bd621ea1470f75fb29a811adb",
+    "name": "Elsterwerdaer Platz",
+    "lines": [
+      {
+        "id": "d53760d23d9f4340687c94f9ed1bb000",
+        "name": "U5",
+        "color": {
+          "background": "#664019",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "23e60f8ed2b51de11527ba3f2d405af2",
+    "name": "Wuhletal",
+    "lines": [
+      {
+        "id": "d53760d23d9f4340687c94f9ed1bb000",
+        "name": "U5",
+        "color": {
+          "background": "#664019",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "1bda66ab6213c430a6e7d5724da304fc",
+    "name": "Kaulsdorf-Nord",
+    "lines": [
+      {
+        "id": "d53760d23d9f4340687c94f9ed1bb000",
+        "name": "U5",
+        "color": {
+          "background": "#664019",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "f35aca850c45d90a71b0d495cdf68f20",
+    "name": "Kienberg",
+    "lines": [
+      {
+        "id": "d53760d23d9f4340687c94f9ed1bb000",
+        "name": "U5",
+        "color": {
+          "background": "#664019",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "9ee8e90c36f932aeaaf30d5c8622dea8",
+    "name": "Cottbusser Platz",
+    "lines": [
+      {
+        "id": "d53760d23d9f4340687c94f9ed1bb000",
+        "name": "U5",
+        "color": {
+          "background": "#664019",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "8745091ae8f155e8ce22e096bd2bb11a",
+    "name": "Hellersdorf",
+    "lines": [
+      {
+        "id": "d53760d23d9f4340687c94f9ed1bb000",
+        "name": "U5",
+        "color": {
+          "background": "#664019",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "d839719ad497d7a2cb5ba69f508c3333",
+    "name": "Hönow",
+    "lines": [
+      {
+        "id": "d53760d23d9f4340687c94f9ed1bb000",
+        "name": "U5",
+        "color": {
+          "background": "#664019",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "276f979fc5a75f89195fcd762be60db0",
+    "name": "Louis-Lewin-Str.",
+    "lines": [
+      {
+        "id": "d53760d23d9f4340687c94f9ed1bb000",
+        "name": "U5",
+        "color": {
+          "background": "#664019",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "297298c053a0cd4a8fbfb200680645b6",
+    "name": "Krumme Lanke",
+    "lines": [
+      {
+        "id": "32403d148757812cbaba299d2eec0192",
+        "name": "U3",
+        "color": {
+          "background": "#00ff66",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "a94b4a71493691d37852498086c04349",
+    "name": "Westhafen",
+    "lines": [
+      {
+        "id": "e746c0d3d3519f7be6bc0a34f215cf07",
+        "name": "U9",
+        "color": {
+          "background": "#ff7300",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "0908efbdf5d6bfc333990a44457cea1c",
+    "name": "Yorckstr.",
+    "lines": [
+      {
+        "id": "7cf3c07b967000e6eeeff19d4d78fea0",
+        "name": "U7",
+        "color": {
+          "background": "#33ccff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "2644f47cd13ffc0a75f326bb474477ce",
+    "name": "Bundestag",
+    "lines": [
+      {
+        "id": "b0a7fa79fc958dd6268e0f15119924e8",
+        "name": "U55",
+        "color": {
+          "background": "#664019",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "f7bdd98cc5447a175976baf6d8b89f8d",
+    "name": "Stadtmitte U2",
+    "lines": [
+      {
+        "id": "463d334d33927c0c4fc8fb8859a5996c",
+        "name": "U2",
+        "color": {
+          "background": "#ff3300",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "84edc4ed207ca5aa3366631b3247c810",
+    "name": "Wittenau",
+    "lines": [
+      {
+        "id": "4a523ec59395ee1756ccce93d08e424b",
+        "name": "U8",
+        "color": {
+          "background": "#0061da",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "70b71549511abe483ee3dea8dd661c3f",
+    "name": "Neukölln",
+    "lines": [
+      {
+        "id": "7cf3c07b967000e6eeeff19d4d78fea0",
+        "name": "U7",
+        "color": {
+          "background": "#33ccff",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "f7f9052db5c565b39ab319decd366424",
+    "name": "Potsdamer Platz",
+    "lines": [
+      {
+        "id": "463d334d33927c0c4fc8fb8859a5996c",
+        "name": "U2",
+        "color": {
+          "background": "#ff3300",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "f6534826f462baab843d8b23066a30fb",
+    "name": "Rathaus Steglitz",
+    "lines": [
+      {
+        "id": "e746c0d3d3519f7be6bc0a34f215cf07",
+        "name": "U9",
+        "color": {
+          "background": "#ff7300",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "46cc4baf97d7d685f2622131d99ada20",
+    "name": "Lichtenberg",
+    "lines": [
+      {
+        "id": "d53760d23d9f4340687c94f9ed1bb000",
+        "name": "U5",
+        "color": {
+          "background": "#664019",
+          "font": "#fff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "303deae0c3e6bf4ef8e3a19c74fa8861",
+    "name": "Alexanderplatz",
+    "lines": [
+      {
+        "id": "4a523ec59395ee1756ccce93d08e424b",
+        "name": "U8",
+        "color": {
+          "background": "#0061da",
+          "font": "#fff"
+        }
+      },
+      {
+        "id": "d53760d23d9f4340687c94f9ed1bb000",
+        "name": "U5",
+        "color": {
+          "background": "#664019",
+          "font": "#fff"
+        }
+      },
+      {
+        "id": "463d334d33927c0c4fc8fb8859a5996c",
+        "name": "U2",
+        "color": {
+          "background": "#ff3300",
+          "font": "#fff"
+        }
+      }
+    ]
+  }
+]

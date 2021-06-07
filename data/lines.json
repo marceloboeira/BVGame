@@ -1,0 +1,82 @@
+[
+  {
+    "id": "463d334d33927c0c4fc8fb8859a5996c",
+    "name": "U2",
+    "color": {
+      "background": "#ff3300",
+      "font": "#fff"
+    }
+  },
+  {
+    "id": "32403d148757812cbaba299d2eec0192",
+    "name": "U3",
+    "color": {
+      "background": "#00ff66",
+      "font": "#fff"
+    }
+  },
+  {
+    "id": "e746c0d3d3519f7be6bc0a34f215cf07",
+    "name": "U9",
+    "color": {
+      "background": "#ff7300",
+      "font": "#fff"
+    }
+  },
+  {
+    "id": "b0a7fa79fc958dd6268e0f15119924e8",
+    "name": "U55",
+    "color": {
+      "background": "#664019",
+      "font": "#fff"
+    }
+  },
+  {
+    "id": "53d568ec85bd7cb4e1b259aabaa58793",
+    "name": "U1",
+    "color": {
+      "background": "#59ff00",
+      "font": "#fff"
+    }
+  },
+  {
+    "id": "4a523ec59395ee1756ccce93d08e424b",
+    "name": "U8",
+    "color": {
+      "background": "#0061da",
+      "font": "#fff"
+    }
+  },
+  {
+    "id": "1b9d52ca030c8dde49e246687a246b24",
+    "name": "U6",
+    "color": {
+      "background": "#4d66ff",
+      "font": "#fff"
+    }
+  },
+  {
+    "id": "7cf3c07b967000e6eeeff19d4d78fea0",
+    "name": "U7",
+    "color": {
+      "background": "#33ccff",
+      "font": "#fff"
+    }
+  },
+  {
+    "id": "6d769c280b5dad8604564f31ff3c1355",
+    "name": "U4",
+    "color": {
+      "background": "#ffe600",
+      "font": "#000"
+    }
+  },
+  {
+    "id": "d53760d23d9f4340687c94f9ed1bb000",
+    "name": "U5",
+    "color": {
+      "background": "#664019",
+      "font": "#fff"
+    }
+  }
+]

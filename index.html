@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>💛 BVGame</title>
+  <meta name="description" content="A game about the Berliner Verkehrsbetriebe (BVG), the main public transport company of Berlin, Germany.">
+  <meta name="author" content="marceloboeira.com">
+  <meta name="robots" content="all">
+  <link rel="stylesheet" type="text/css" href="./assets/style.css" />
+</head>
+<body>
+  <div id="application">
+    <div id="body">
+      <div class="title">
+        <h2 class="loading">Loading...</h2>
+      </div>
+    </div>
+  </div>
+</body>
+<script type="text/javascript" src="./assets/application.js"></script>
+<script type="text/javascript">
+  Elm.Application.init({
+    node: document.getElementById("application")
+  });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134838420-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", 'UA-134838420-1');
+</script>
+</html>

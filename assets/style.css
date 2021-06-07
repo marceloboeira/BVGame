@@ -1,0 +1,138 @@
+article,aside,details,figcaption,figure,footer,header,hgroup,hr,menu,nav,section{display:block}a,hr{padding:0}abbr,address,article,aside,audio,b,blockquote,body,canvas,caption,cite,code,dd,del,details,dfn,div,dl,dt,em,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,p,pre,q,samp,section,small,span,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,ul,var,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:0 0}ins,mark{background-color:#ff9;color:#000}body{line-height:1}nav ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}a{margin:0;font-size:100%;vertical-align:baseline;background:0 0}ins{text-decoration:none}mark{font-style:italic;font-weight:700}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{height:1px;border:0;border-top:1px solid #ccc;margin:1em 0}input,select{vertical-align:middle}
+
+
+@font-face {
+  font-family: "Sys 1.1";
+  src: url("./sys1-1.eot");
+  src: url("./sys1-1.eot?#iefix") format("embedded-opentype"),
+  url("./sys1-1.woff2") format("woff2"),
+  url("./sys1-1.woff") format("woff"),
+  url("./sys1-1.ttf") format("truetype"),
+  url("./sys1-1.svg#Sys 1.1") format("svg");
+}
+
+@font-face {
+  font-family: "transit";
+  src: url("./TransitWeb.woff") format('woff');
+}
+
+html, body{
+  background-color: #222;
+  height: 100%;
+  margin: 0;
+}
+
+
+.title h2 {
+  color: #bbb9b4;
+  font-family: 'transit';
+  font-size: 8em;
+  text-align: center;
+}
+
+.title p {
+  color: #bbb9b4;
+  font-family: 'transit';
+  font-size: 2em;
+  text-align: center;
+}
+
+.title p.try-again {
+  cursor: pointer;
+}
+
+.title p.try-again:hover {
+  font-weight: bold;
+}
+
+.start {
+  cursor: pointer;
+}
+
+#application {
+  height: 100%;
+  white-space: nowrap;
+  text-align: center;
+}
+
+#application:before{
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  margin-right: -.25em;
+  height: 100%;
+}
+
+#body {
+  width: 90%;
+  display: inline-block;
+  vertical-align: middle;
+  white-space: normal;
+}
+
+
+.options {
+  margin-top: 20px;
+}
+
+.options button.line {
+  font-family: "transit";
+  cursor: pointer;
+  border: 0;
+  background: none;
+  box-shadow: none;
+  border-radius: 0px;
+  font-weight: bold;
+  font-size: 2em;
+  width: 70px;
+  height: 60px;
+  max-height: 60px;
+}
+
+.options button.line:hover {
+  opacity: 0.3;
+}
+
+#body .status {
+  display: inline-block;
+  background-color: #222;
+  color: white;
+  min-height: 20px;
+  padding: 15px;
+}
+
+#body .status .answer {}
+
+#body .status .time {}
+
+#body .status .score {}
+
+
+#body .status .answer.correct {
+  color: green;
+}
+
+#body .status .answer.incorrect {
+  color: red;
+}
+
+#body .status .time {
+  padding: 2px;
+}
+
+#footer {
+  margin: -100px;
+}
+#footer .logo {
+  color: #bbb9b4;
+  font-family: "Sys 1.1";
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#footer p {
+  color: #bbb9b4;
+}
+
