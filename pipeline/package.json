@@ -10,8 +10,8 @@
   "author": "Marcelo Boeira <me@marceloboeira.com> (https://marceloboeira.com)",
   "license": "MIT",
   "dependencies": {
-    "md5": "^2.2.1",
-    "vbb-lines-at": "^3.18.0",
-    "vbb-stations": "^6.9.0"
+    "md5": "^2.3.0",
+    "vbb-lines-at": "^3.20.0",
+    "vbb-stations": "^6.11.0"
   }
 }
