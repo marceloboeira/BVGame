@@ -40,6 +40,8 @@ In order to gather information about the stations, a small pipeline was created,
 
 The output of the pipeline is copied to `dist/data/` as JSON files, consumed by the web-application as data source.
 
+Last updated at: 22.01.2022
+
 # Contributing
 > Help us to improve the codebase
 
