@@ -42,7 +42,6 @@ The output of the pipeline is copied to `dist/data/` as JSON files, consumed by 
 
 Last updated at: 02.08.2025
 
-
 # Contributing
 > Help us to improve the codebase
 
@@ -68,7 +67,8 @@ Want to contribute with code?
 * `make setup` - One time setup of dependencies.
 * `make setup_pipeline` - Install dependencies for the pipeline. (It's triggered by the setup)
 * `make build_pipeline` - Run the pipeline and copy the files to the `dist/` folder.  (It's triggered by the setup)
-* `make test` - Run the tests.
+* `make test` - Run the tests (Elm + Pipeline).
+* `make test_pipeline` - Run only the pipeline tests.
 * `make test_watch` - Run the tests watching for changes.
 * `make check_format` - Check if the code is formated
 * `make format` - Format the code following elm standards.

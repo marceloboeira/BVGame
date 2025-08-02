@@ -16,8 +16,12 @@ PIPELINE_FOLDER ?= $(HERE)/pipeline
 setup_pipeline:
 	@cd $(PIPELINE_FOLDER) && $(NPM) install
 
+.PHONY: test_pipeline
+test_pipeline:
+	@cd $(PIPELINE_FOLDER) && $(NPM) run test
+
 .PHONY: build_pipeline
-build_pipeline:
+build_pipeline: test_pipeline
 	@cd $(PIPELINE_FOLDER) && $(NPM) run pipeline
 	@cp $(PIPELINE_FOLDER)/output/*.json $(DIST_FOLDER)/data/
 
@@ -38,7 +42,7 @@ build:
 	@$(ELM) make $(APPLICATION_ENTRYPOINT) --output $(APPLICATION_OUTPUT) --optimize
 
 .PHONY: test
-test: format_check
+test: format_check test_pipeline
 	@$(ELM_TEST)
 
 .PHONY: test_watch

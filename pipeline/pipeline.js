@@ -55,11 +55,21 @@ const colorFor = (line) => {
  * S+U Rathaus Steglitz (Bhf) [U9] | Rathaus Steglitz
  * Berlin, Foo Bar                 | Foo Bar
  */
-const cleanStationName = (name) => name.replace(/((S\+U)|(Berlin,)|(U\s)|(\(.*?\))|(\[U[0-9]*\]))/g, "").trim()
+const cleanStationName = (name) => {
+  const cleaned = name.replace(/((S\+U)|(Berlin,)|(U\s)|(\(.*?\))|(\[U[0-9]*\])|(\sU[0-9]*$))/g, "").trim()
+  // If the result is just a line name (U1, U2, etc.), return empty string
+  return /^U[0-9]+$/.test(cleaned) ? "" : cleaned
+}
+
+// Export for testing
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { cleanStationName }
+}
 
 const mergeStation = (stations, station, lines) => {
   const stationName = cleanStationName(station["name"])
-  if (lines.length > 0) {
+  // Skip stations with empty names or just line names
+  if (lines.length > 0 && stationName && stationName.length > 0) {
     if (stations[stationName] == null) {
       stations[stationName] = { "id": md5(stationName), "name": stationName, "lines": lines }
     } else {

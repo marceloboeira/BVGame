@@ -1,6 +1,11 @@
 # Changelog
 > See what changed over time
 
+## v0.2.1 - WIP
+
+* Pipeline updated stations for 2025
+* Pipeline fixes: Leaking line names
+
 ## v0.2.0 - Timeout
 
 The game now has a new design and a time constraint.
