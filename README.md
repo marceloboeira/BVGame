@@ -19,6 +19,13 @@ The ideia is to learn more about functional programming & front-end applications
 
 The game is about Subway Stations and Lines from the Berliner Verkehrsbetriebe [BVG](https://www.bvg.de/en). The players must guess at least one train Line that cross a given station.
 
+### Controls
+
+The game is fully keyboard-oriented:
+
+- **Space**: Start the game
+- **Numbers 1-9**: Select a line option (corresponds to the order of displayed lines)
+
 # Architecture
 > How does it work?
 

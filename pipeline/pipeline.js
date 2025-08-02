@@ -38,7 +38,6 @@ const colorFor = (line) => {
     "U3": { "background": "#00ff66", "font": "#fff"  },
     "U4": { "background": "#ffe600", "font": "#000"  },
     "U5": { "background": "#664019", "font": "#fff"  },
-    "U55": { "background": "#664019", "font": "#fff"  },
     "U6": { "background": "#4d66ff", "font": "#fff"  },
     "U7": { "background": "#33ccff", "font": "#fff"  },
     "U8": { "background": "#0061da", "font": "#fff"  },

@@ -26,6 +26,7 @@ type Action
     | GotShuffledStations (List Station)
     | Start
     | Verify Station Line
+    | KeyPress String
 
 
 type alias State =
@@ -41,6 +42,25 @@ type alias State =
 roundTime : Int
 roundTime =
     30
+
+
+handleNumberKey : Int -> State -> ( State, Cmd Action )
+handleNumberKey number state =
+    case state.step of
+        Ask station ->
+            let
+                selectedLine =
+                    List.head (List.drop (number - 1) state.lines)
+            in
+            case selectedLine of
+                Just line ->
+                    update (Verify station line) state
+
+                Nothing ->
+                    ( state, Cmd.none )
+
+        _ ->
+            ( state, Cmd.none )
 
 
 fetchLines : Cmd Action
@@ -143,3 +163,43 @@ update action state =
                       }
                     , Cmd.none
                     )
+
+        KeyPress key ->
+            case key of
+                " " ->
+                    case state.step of
+                        NotStarted ->
+                            update Start state
+
+                        _ ->
+                            ( state, Cmd.none )
+
+                "1" ->
+                    handleNumberKey 1 state
+
+                "2" ->
+                    handleNumberKey 2 state
+
+                "3" ->
+                    handleNumberKey 3 state
+
+                "4" ->
+                    handleNumberKey 4 state
+
+                "5" ->
+                    handleNumberKey 5 state
+
+                "6" ->
+                    handleNumberKey 6 state
+
+                "7" ->
+                    handleNumberKey 7 state
+
+                "8" ->
+                    handleNumberKey 8 state
+
+                "9" ->
+                    handleNumberKey 9 state
+
+                _ ->
+                    ( state, Cmd.none )

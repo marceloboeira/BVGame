@@ -3,8 +3,14 @@
 
 ## v0.2.1 - WIP
 
+Features:
+* Added keyboard controls: Space to start, numbers 1-9 to select lines
+
+Technicall improvements:
 * Pipeline updated stations for 2025
-* Pipeline fixes: Leaking line names
+
+Bug fixes:
+* Leaking line names in station
 
 ## v0.2.0 - Timeout
 

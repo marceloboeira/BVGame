@@ -45,7 +45,22 @@ viewAnswer b =
 
 viewLines : List Line -> Station -> Html Action
 viewLines lines station =
-    div [ class "options" ] (map (viewLine station) lines)
+    div [ class "options" ] (List.indexedMap (viewLineWithNumber station) lines)
+
+
+viewLineWithNumber : Station -> Int -> Line -> Html Action
+viewLineWithNumber station index line =
+    let
+        number =
+            index + 1
+    in
+    button
+        [ class "line"
+        , style "background-color" line.color.background
+        , style "color" line.color.font
+        , onClick (State.Verify station line)
+        ]
+        [ text line.name ]
 
 
 viewStatus : Maybe Bool -> Int -> Int -> Html Action
@@ -69,7 +84,7 @@ viewError err =
 
 viewNotStarted : Html Action
 viewNotStarted =
-    div [ class "title" ] [ h2 [ class "start", onClick State.Start ] [ text "Start" ] ]
+    div [ class "title" ] [ h2 [ class "start" ] [ text "Press space to start" ] ]
 
 
 viewAsk : Station -> Html Action

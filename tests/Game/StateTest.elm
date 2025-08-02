@@ -310,4 +310,72 @@ suite =
                     ]
                 ]
             ]
+        , describe "when KeyPress"
+            [ describe "when pressing space"
+                [ describe "and the state is NotStarted"
+                    [ test "start the game" <|
+                        \() ->
+                            { baseState | step = State.NotStarted, stations = unshuffledStations }
+                                |> State.update (State.KeyPress " ")
+                                |> Tuple.first
+                                |> .step
+                                |> Expect.equal (State.Ask sampleStation1)
+                    ]
+                , describe "and the state is not NotStarted"
+                    [ test "do not change the state" <|
+                        \() ->
+                            { baseState | step = State.Ask sampleStation1 }
+                                |> State.update (State.KeyPress " ")
+                                |> Tuple.first
+                                |> Expect.equal { baseState | step = State.Ask sampleStation1 }
+                    ]
+                ]
+            , describe "when pressing number keys"
+                [ describe "and the state is Ask"
+                    [ test "select line 1 when pressing 1" <|
+                        \() ->
+                            { baseState | step = State.Ask sampleStation1, lines = sortedLines }
+                                |> State.update (State.KeyPress "1")
+                                |> Tuple.first
+                                |> .lastAnswer
+                                |> Expect.equal (Just True)
+                    , test "select line 2 when pressing 2" <|
+                        \() ->
+                            { baseState | step = State.Ask sampleStation1, lines = sortedLines }
+                                |> State.update (State.KeyPress "2")
+                                |> Tuple.first
+                                |> .lastAnswer
+                                |> Expect.equal (Just True)
+                    , test "select line 3 when pressing 3" <|
+                        \() ->
+                            { baseState | step = State.Ask sampleStation1, lines = sortedLines }
+                                |> State.update (State.KeyPress "3")
+                                |> Tuple.first
+                                |> .lastAnswer
+                                |> Expect.equal (Just True)
+                    , test "do nothing when pressing invalid number" <|
+                        \() ->
+                            { baseState | step = State.Ask sampleStation1, lines = sortedLines }
+                                |> State.update (State.KeyPress "0")
+                                |> Tuple.first
+                                |> Expect.equal { baseState | step = State.Ask sampleStation1, lines = sortedLines }
+                    ]
+                , describe "and the state is not Ask"
+                    [ test "do not change the state" <|
+                        \() ->
+                            { baseState | step = State.NotStarted }
+                                |> State.update (State.KeyPress "1")
+                                |> Tuple.first
+                                |> Expect.equal { baseState | step = State.NotStarted }
+                    ]
+                ]
+            , describe "when pressing other keys"
+                [ test "do not change the state" <|
+                    \() ->
+                        baseState
+                            |> State.update (State.KeyPress "a")
+                            |> Tuple.first
+                            |> Expect.equal baseState
+                ]
+            ]
         ]
