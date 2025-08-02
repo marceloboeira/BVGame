@@ -80,7 +80,7 @@ const mergeLines = (lines, stationLines) => {
 }
 
 const subwayLinesFor = (station) => {
-  return vbbLinesAt[station["id"]]
+  return (vbbLinesAt[station["id"]] || [])
     .filter(line => line["product"] == "subway")
     .map(line => {
       return {

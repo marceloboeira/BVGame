@@ -27,7 +27,7 @@ setup: setup_pipeline build_pipeline
 
 .PHONY: format
 format:
-	@$(ELM_FORMAT) $(HERE) --upgrade --yes
+	@$(ELM_FORMAT) $(HERE) --yes
 
 .PHONY: format_check
 format_check:
