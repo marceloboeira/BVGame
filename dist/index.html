@@ -6,6 +6,7 @@
   <meta name="description" content="A game about the Berliner Verkehrsbetriebe (BVG), the main public transport company of Berlin, Germany.">
   <meta name="author" content="marceloboeira.com">
   <meta name="robots" content="all">
+m  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="./assets/style.css" />
 </head>
 <body>
@@ -19,9 +20,119 @@
 </body>
 <script type="text/javascript" src="./assets/application.js"></script>
 <script type="text/javascript">
-  Elm.Application.init({
+  var app = Elm.Application.init({
     node: document.getElementById("application")
   });
+
+  // Sound effects
+  function playCorrectSound() {
+    // Create a simple beep sound for correct answer
+    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    const oscillator = audioContext.createOscillator();
+    const gainNode = audioContext.createGain();
+    
+    oscillator.connect(gainNode);
+    gainNode.connect(audioContext.destination);
+    
+    oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
+    oscillator.frequency.setValueAtTime(1000, audioContext.currentTime + 0.1);
+    oscillator.frequency.setValueAtTime(1200, audioContext.currentTime + 0.2);
+    
+    gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+    gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
+    
+    oscillator.start(audioContext.currentTime);
+    oscillator.stop(audioContext.currentTime + 0.3);
+  }
+
+  function playWrongSound() {
+    // Create a simple error sound for wrong answer
+    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    const oscillator = audioContext.createOscillator();
+    const gainNode = audioContext.createGain();
+    
+    oscillator.connect(gainNode);
+    gainNode.connect(audioContext.destination);
+    
+    oscillator.frequency.setValueAtTime(200, audioContext.currentTime);
+    oscillator.frequency.setValueAtTime(150, audioContext.currentTime + 0.1);
+    oscillator.frequency.setValueAtTime(100, audioContext.currentTime + 0.2);
+    
+    gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+    gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
+    
+    oscillator.start(audioContext.currentTime);
+    oscillator.stop(audioContext.currentTime + 0.3);
+  }
+
+  function playWarningSound() {
+    // Create a warning sound for urgent timer
+    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    const oscillator = audioContext.createOscillator();
+    const gainNode = audioContext.createGain();
+    
+    oscillator.connect(gainNode);
+    gainNode.connect(audioContext.destination);
+    
+    oscillator.frequency.setValueAtTime(400, audioContext.currentTime);
+    oscillator.frequency.setValueAtTime(300, audioContext.currentTime + 0.1);
+    oscillator.frequency.setValueAtTime(400, audioContext.currentTime + 0.2);
+    oscillator.frequency.setValueAtTime(300, audioContext.currentTime + 0.3);
+    
+    gainNode.gain.setValueAtTime(0.4, audioContext.currentTime);
+    gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.4);
+    
+    oscillator.start(audioContext.currentTime);
+    oscillator.stop(audioContext.currentTime + 0.4);
+  }
+
+  // Handle high score with localStorage for each game mode
+  if (app.ports && app.ports.saveScorePort) {
+    app.ports.saveScorePort.subscribe(function(data) {
+      if (data && typeof data.score === "number" && data.mode) {
+        var storageKey = "bvgame_high_score_" + data.mode;
+        var current = parseInt(localStorage.getItem(storageKey) || "0", 10);
+        if (data.score > current) {
+          localStorage.setItem(storageKey, data.score.toString());
+        }
+      }
+    });
+  }
+
+  if (app.ports && app.ports.getHighScorePort) {
+    app.ports.getHighScorePort.subscribe(function() {
+      // Load high scores for all modes
+      var classicScore = parseInt(localStorage.getItem("bvgame_high_score_classic") || "0", 10);
+      var survivalScore = parseInt(localStorage.getItem("bvgame_high_score_survival") || "0", 10);
+      var timeAttackScore = parseInt(localStorage.getItem("bvgame_high_score_timeattack") || "0", 10);
+      
+      // Send all high scores back to Elm
+      app.ports.getHighScorePort.send({ 
+        classic: classicScore,
+        survival: survivalScore,
+        timeAttack: timeAttackScore
+      });
+    });
+  }
+
+  // Handle sound effects
+  if (app.ports && app.ports.playCorrectSoundPort) {
+    app.ports.playCorrectSoundPort.subscribe(function() {
+      playCorrectSound();
+    });
+  }
+
+  if (app.ports && app.ports.playWrongSoundPort) {
+    app.ports.playWrongSoundPort.subscribe(function() {
+      playWrongSound();
+    });
+  }
+
+  if (app.ports && app.ports.playWarningSoundPort) {
+    app.ports.playWarningSoundPort.subscribe(function() {
+      playWarningSound();
+    });
+  }
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134838420-1"></script>
 <script>
